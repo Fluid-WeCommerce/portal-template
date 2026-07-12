@@ -1,0 +1,68 @@
+name: Deploy Portal
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  GCP_PROJECT: fluid-417204
+  GCS_BUCKET: gs://portals-cdn/fluid-portal-starter/assets
+  CDN_URL_MAP: custom-domains-c42c
+  CDN_INVALIDATION_PATH: /fluid-portal-starter/assets/*
+  # CDN frontend hostname — update this to match your load balancer's domain.
+  # Using the raw GCS URL bypasses Cloud CDN; the CDN-fronted URL ensures
+  # chunk imports are served (and invalidated) through the cache.
+  CDN_HOSTNAME: https://cdn.example.com
+
+jobs:
+  build-and-upload:
+    name: Build and upload to GCS
+    runs-on: ubuntu-latest
+    concurrency:
+      group: portal-deploy-${{ github.ref }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Build portal
+        run: pnpm build
+        env:
+          VITE_ASSET_BASE: ${{ env.CDN_HOSTNAME }}/fluid-portal-starter/assets/
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          project_id: ${{ env.GCP_PROJECT }}
+          credentials_json: ${{ secrets.GCP_SA_JSON }}
+
+      - name: Setup Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ env.GCP_PROJECT }}
+
+      - name: Upload assets to GCS
+        run: |
+          gcloud storage rsync ./dist ${{ env.GCS_BUCKET }} \
+            --recursive \
+            --delete-unmatched-destination-objects
+
+      - name: Invalidate CDN cache
+        run: |
+          gcloud compute url-maps invalidate-cdn-cache ${{ env.CDN_URL_MAP }} \
+            --path="${{ env.CDN_INVALIDATION_PATH }}" \
+            --global

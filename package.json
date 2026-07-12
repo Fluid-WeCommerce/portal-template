@@ -1,0 +1,47 @@
+{
+  "name": "fluid-portal-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "pull": "fluid portal pull",
+    "push": "fluid portal push",
+    "widget:create": "fluid portal widget create"
+  },
+  "dependencies": {
+    "@fluid-app/portal-sdk": "^0.1.411",
+    "@fluid-app/ui-primitives": "^0.1.0",
+    "@hookform/resolvers": "^5.2.2",
+    "@tanstack/react-query": "^5.90.11",
+    "lucide-react": "~0.575.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-hook-form": "^7.64.0",
+    "zod": "4.3.5",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@fluid-app/fluid-cli": "^0.1.13",
+    "@fluid-app/fluid-cli-portal": "^0.1.13",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.0",
+    "tailwindcss": "^4.0.0",
+    "oxlint": "^1.51.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.4.1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.4.1",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
