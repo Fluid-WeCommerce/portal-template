@@ -59,6 +59,14 @@ Guidelines:
 - Do not hand-edit `.portal-sync/`; it is sync metadata, not source content.
 - Do not invent unsupported fields. Match the shapes produced by `pnpm pull`.
 
+## Profile matching & preview identity (the #1 trap)
+
+Profile `permissions` (roles, ranks, countries, platform) are evaluated against **whoever is logged in — including the preview session**. A profile that doesn't match the current viewer silently falls back to the `default` profile, and the portal renders the system-default customer experience (sidebar: Shop / Messaging / Contacts / Profile / Orders / Subscriptions / Products). Nothing errors; it just looks like your changes vanished.
+
+- Build and preview on the `default` (or unrestricted) profile FIRST; add role/rank/country segmentation LAST, once the experience works.
+- Never invent role or rank strings — they must match the company's configured values.
+- "Wrong sidebar / my screens don't show" debug order: (1) does the active profile's permissions match the previewing member? (2) does that profile's NAVIGATION reference the screen? (3) is the draft pushed — and for live, was a version activated? Name which layer failed.
+
 ## Validate locally
 
 Run the checks that match the change:
