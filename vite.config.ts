@@ -6,12 +6,17 @@ import {
   fluidManifestPlugin,
   fluidPreviewPlugin,
 } from "@fluid-app/portal-sdk/vite";
+// Serves the local portal/ draft in dev (manifest interception + same-origin
+// /api proxy). `fluid portal dev` also injects this automatically; the plugin
+// is idempotent, so wiring it here keeps plain `vite`/IDE launches working.
+import { portalDevPlugin } from "@fluid-app/fluid-cli-portal/vite-plugin";
 
 export default defineConfig({
   base: process.env.VITE_ASSET_BASE ?? "/",
   plugins: [
     react(),
     tailwindcss(),
+    portalDevPlugin(),
     fluidManifestPlugin(),
     fluidPreviewPlugin(),
   ],
