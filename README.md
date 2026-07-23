@@ -51,8 +51,8 @@ Set `VITE_API_URL` in `.env` if you need to point the SDK at a non-default Fluid
 ├── src/
 │   ├── main.tsx                                   # createPortal bootstrap
 │   ├── index.css                                  # Tailwind and SDK globals
-│   ├── portal.config.ts                           # SDK/widget package integration
-│   ├── preview-entry.tsx                          # Builder/widget preview entry
+│   ├── portal.config.ts                           # Custom page registration
+│   ├── widgets.config.ts                          # Remote DOM widget package source
 │   └── widgets/                                   # Created by pnpm widget:create
 ├── portal/                                        # Created/refreshed by fluid portal pull
 └── .portal-sync/                                  # Generated sync metadata

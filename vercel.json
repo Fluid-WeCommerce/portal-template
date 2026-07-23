@@ -1,5 +1,4 @@
 {
-  "rewrites": [{ "source": "/__preview__", "destination": "/preview.html" }],
   "headers": [
     {
       "source": "/__manifests__.json",
@@ -7,15 +6,6 @@
         {
           "key": "Access-Control-Allow-Origin",
           "value": "https://admin.fluid.app"
-        }
-      ]
-    },
-    {
-      "source": "/__preview__",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "frame-ancestors https://admin.fluid.app https://*.fluid.app"
         }
       ]
     }

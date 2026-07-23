@@ -1,5 +1,3 @@
-import type { WidgetManifest } from "@fluid-app/portal-sdk";
-
 /**
  * Portal SDK integration point.
  *
@@ -8,7 +6,7 @@ import type { WidgetManifest } from "@fluid-app/portal-sdk";
  * then `pnpm push`. Keep portal structure, routes, and content in the
  * pulled Fluid OS JSON files.
  *
- * Keep this file for widget manifests or source widget packages that need
- * to be available to the SDK preview/runtime.
+ * Keep custom pages here. Widget source packages live separately in
+ * `src/widgets.config.ts` and are published to the Remote DOM catalog.
  */
-export const customWidgets: WidgetManifest[] = [];
+export const customPages = {};

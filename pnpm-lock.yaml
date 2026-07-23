@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fluid-app/portal-sdk':
-        specifier: ^0.1.411
-        version: 0.1.411(@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7)))(@tanstack/react-query@5.101.2(react@19.2.7))(@types/react@19.2.17)(lucide-react@0.575.0(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react-hook-form@7.81.0(react@19.2.7))(react@19.2.7)(vite@6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.0))(zod@4.3.5)(zustand@5.0.14(@types/react@19.2.17)(react@19.2.7)(use-sync-external-store@1.6.0(react@19.2.7)))
+        specifier: ^0.1.460
+        version: 0.1.460(@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7)))(@tanstack/react-query@5.101.2(react@19.2.7))(@types/react@19.2.17)(lucide-react@0.575.0(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react-hook-form@7.81.0(react@19.2.7))(react@19.2.7)(zod@4.3.5)(zustand@5.0.14(@types/react@19.2.17)(react@19.2.7)(use-sync-external-store@1.6.0(react@19.2.7)))
       '@fluid-app/ui-primitives':
         specifier: ^0.1.0
         version: 0.1.14(@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7)))(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(date-fns@3.6.0)(react-dom@19.2.7(react@19.2.7))(react-hook-form@7.81.0(react@19.2.7))(react@19.2.7)(zod@4.3.5)
@@ -43,8 +43,8 @@ importers:
         specifier: ^0.1.13
         version: 0.1.13
       '@fluid-app/fluid-cli-portal':
-        specifier: ^0.1.13
-        version: 0.1.37
+        specifier: ^0.1.51
+        version: 0.1.51(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.2(vite@6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.0))
@@ -486,17 +486,22 @@ packages:
   '@floating-ui/utils@0.2.12':
     resolution: {integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==}
 
-  '@fluid-app/fluid-cli-portal@0.1.37':
-    resolution: {integrity: sha512-IInysN77UHh3n2b5mgow1Izihyb6maUNAM31287IdaAqFn+Z3TisMYXLQvegFXtxWgoieDHTF+JWjyGHLPmvpw==}
-    engines: {node: '>=18.0.0'}
+  '@fluid-app/fluid-cli-portal@0.1.51':
+    resolution: {integrity: sha512-228Bq8koMqugEprHWhtcSEJELuEkqYTwpQiYd7fnySdG7uZ15lO1DWkqZNSqWVXUXRsUriZEpU/QLn6nD5zQHg==}
+    engines: {node: '>=24.0.0'}
 
   '@fluid-app/fluid-cli@0.1.13':
     resolution: {integrity: sha512-dNF6t4vVlrTl9ZAHgEet/sa0/Z3mJ6OrmyF8ZGBQRMP0R/hw0pxVLXz3nr5KQ1kFOpYITmb0IkKoytAQirtVNA==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
-  '@fluid-app/portal-sdk@0.1.411':
-    resolution: {integrity: sha512-rMrFBWBRMbanNobkfEST+AQAIDw/f7OnQYar7Ng+/990RD57vx8Lu9oYZRsfO89a7PucPoy7Fknsyr3Mce+/Yg==}
+  '@fluid-app/fluid-cli@0.1.14':
+    resolution: {integrity: sha512-F+KznKrS7MGcdlBZjB2NCzVsnZKKoG8au5ndqGlxPrl2cSuz+rF6DKUHmYfDm57MzSI4/3j8QGJpUGRZHYtirw==}
+    engines: {node: '>=24.0.0'}
+    hasBin: true
+
+  '@fluid-app/portal-sdk@0.1.460':
+    resolution: {integrity: sha512-HIynOJ70fVJx7zCV7QYvrdAXu31IvVJKMchdS7hS1H64Z+7v0yNzyfkwbJGXW3s3/2fA0lHnUpLSJQaUItpo5w==}
     peerDependencies:
       '@hookform/resolvers': ^5.2.2
       '@tanstack/react-query': ^5.90.11
@@ -504,12 +509,9 @@ packages:
       react: ^19.2.4
       react-dom: ^19.2.4
       react-hook-form: ^7.64.0
-      vite: ^6.4.1
       zod: 4.3.5
       zustand: ^5.0.9
     peerDependenciesMeta:
-      vite:
-        optional: true
       zustand:
         optional: true
 
@@ -530,6 +532,12 @@ packages:
         optional: true
       zod:
         optional: true
+
+  '@fluid-app/widget-runtime@0.1.0':
+    resolution: {integrity: sha512-Di3+UPgVbY/8R+DKTwybBoHndC1KbFbXEPUWUVEvM23rRe0fiarNh3KztkT9T0gbYhyh1AwW08YD2H89VxxZzA==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   '@hookform/resolvers@5.4.0':
     resolution: {integrity: sha512-EIsqr/t/qbinPIhGjMdtvutIN1Kk4uwbROE9/UQ93CAVGR7GkA7Y92+fX80OzXi/OB67jVFYwKGO1WzkxmkFZw==}
@@ -665,6 +673,22 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
+
+  '@preact/signals-core@1.14.3':
+    resolution: {integrity: sha512-m0K3vnbSLC5rHs2ZVfeAMvBtT1zIyq4mxx5OlNncSgMj5Iz6W5Rn3kPrDxAC+iIKmiVe0lSl6U37t5ZkEWoVAw==}
+
+  '@quilted/events@2.1.5':
+    resolution: {integrity: sha512-WUsJtSI2npAVo1WZNl60dagmC7JxBbMqTikvGuAMzGP9ZKPBpLw0AnhaBoX6mmCfvUTylMLDYbMW8zHqSinUfw==}
+    engines: {node: '>=14.0.0'}
+
+  '@quilted/threads@4.1.0':
+    resolution: {integrity: sha512-jBt1tVPoo6rznPHel0xLkmcmp/IFYyDkGHCfgkdcQnk/kHyh63XlYSGpjxZQcm/As0NMOjj7AJ8ry/T7tSGNhQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@preact/signals-core': ^1.14.2
+    peerDependenciesMeta:
+      '@preact/signals-core':
+        optional: true
 
   '@radix-ui/number@1.1.2':
     resolution: {integrity: sha512-ceTwaxc4I5IOi97DgCotl3pqiyRGvffcc0oOsE2dQYaJOFIDsDt4VWG6xEbg1QePv9QWausCEIppud/tJ1wNig==}
@@ -1356,6 +1380,31 @@ packages:
   '@radix-ui/rect@1.1.2':
     resolution: {integrity: sha512-xnXE7wG13PI+cxieVssYXlQJuYVRhH9NBoxt3KNwzghDIA69GMm7d4wXRouHIYjE+KvS6U/MsMO73NdS2MH9ZA==}
 
+  '@remote-dom/core@1.11.1':
+    resolution: {integrity: sha512-0v29Q7F/iunb2cJm3E7r780X6jcPEFEgetSGisgRssJuoP9217yC1MKLVFNdXRmJYKX+oaugQKqaD2m8XA9dTQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@preact/signals-core': ^1.3.0
+      preact: '*'
+    peerDependenciesMeta:
+      '@preact/signals-core':
+        optional: true
+      preact:
+        optional: true
+
+  '@remote-dom/polyfill@1.5.1':
+    resolution: {integrity: sha512-eaWdIVKZpNfbqspKkRQLVxiFv/7vIw8u0FVA5oy52YANFbO/WVT0GU+PQmRt/QUSijaB36HBAqx7stjo8HGpVQ==}
+    engines: {node: '>=14.0.0'}
+
+  '@remote-dom/react@1.2.2':
+    resolution: {integrity: sha512-PkvioODONTr1M0StGDYsR4Ssf5M0Rd4+IlWVvVoK3Zrw8nr7+5mJkgNofaj/z7i8Aep78L28PCW8/WduUt4unA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+
   '@rolldown/pluginutils@1.0.0-beta.27':
     resolution: {integrity: sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==}
 
@@ -1627,10 +1676,16 @@ packages:
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
+  '@types/prop-types@15.7.15':
+    resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
+
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
       '@types/react': ^19.2.0
+
+  '@types/react@18.3.31':
+    resolution: {integrity: sha512-vfEqpXTvwT91yhmwdfouStN2hSKwTvyRs8qpLfADyrq/kxDw0hZM7Wk9Ug1FELj8hIby+S/+kQCSRFF32nv2Qw==}
 
   '@types/react@19.2.17':
     resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
@@ -1857,6 +1912,9 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
+  htm@3.1.1:
+    resolution: {integrity: sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==}
+
   human-signals@5.0.0:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
@@ -2081,8 +2139,15 @@ packages:
     resolution: {integrity: sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A==}
     engines: {node: '>=12'}
 
+  postcss-value-parser@4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+
   postcss@8.5.17:
     resolution: {integrity: sha512-J7EF+8X+CzRPaJPOv9Ck2wNWJvGnnl3PcNPAdGg6GTLjyVpyQ0yATMSXRFRV01BviT/9Gwuc3rjEyJbDJG9a4w==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.5.9:
+    resolution: {integrity: sha512-7a70Nsot+EMX9fFU3064K/kdHWZqGVY+BADLyXc8Dfv+mTLLVl6JzJpPaCZ2kQL9gIJvKXSLMHhqdRRjwQeFtw==}
     engines: {node: ^10 || ^12 || >=14}
 
   prompts@2.4.2:
@@ -2690,9 +2755,9 @@ snapshots:
 
   '@floating-ui/utils@0.2.12': {}
 
-  '@fluid-app/fluid-cli-portal@0.1.37':
+  '@fluid-app/fluid-cli-portal@0.1.51(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.13
+      '@fluid-app/fluid-cli': 0.1.14
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2702,6 +2767,18 @@ snapshots:
       p-limit: 7.3.0
       prompts: 2.4.2
       tsx: 4.23.0
+      vite: 6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.0)
+    transitivePeerDependencies:
+      - '@types/node'
+      - jiti
+      - less
+      - lightningcss
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - terser
+      - yaml
 
   '@fluid-app/fluid-cli@0.1.13':
     dependencies:
@@ -2710,8 +2787,16 @@ snapshots:
       ora: 8.2.0
       prompts: 2.4.2
 
-  '@fluid-app/portal-sdk@0.1.411(@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7)))(@tanstack/react-query@5.101.2(react@19.2.7))(@types/react@19.2.17)(lucide-react@0.575.0(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react-hook-form@7.81.0(react@19.2.7))(react@19.2.7)(vite@6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.0))(zod@4.3.5)(zustand@5.0.14(@types/react@19.2.17)(react@19.2.7)(use-sync-external-store@1.6.0(react@19.2.7)))':
+  '@fluid-app/fluid-cli@0.1.14':
     dependencies:
+      chalk: 5.6.2
+      commander: 12.1.0
+      ora: 8.2.0
+      prompts: 2.4.2
+
+  '@fluid-app/portal-sdk@0.1.460(@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7)))(@tanstack/react-query@5.101.2(react@19.2.7))(@types/react@19.2.17)(lucide-react@0.575.0(react@19.2.7))(react-dom@19.2.7(react@19.2.7))(react-hook-form@7.81.0(react@19.2.7))(react@19.2.7)(zod@4.3.5)(zustand@5.0.14(@types/react@19.2.17)(react@19.2.7)(use-sync-external-store@1.6.0(react@19.2.7)))':
+    dependencies:
+      '@fluid-app/widget-runtime': 0.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@hookform/resolvers': 5.4.0(react-hook-form@7.81.0(react@19.2.7))
       '@radix-ui/react-slot': 1.3.0(@types/react@19.2.17)(react@19.2.7)
       '@tanstack/react-query': 5.101.2(react@19.2.7)
@@ -2730,10 +2815,10 @@ snapshots:
       use-sync-external-store: 1.6.0(react@19.2.7)
       zod: 4.3.5
     optionalDependencies:
-      vite: 6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.0)
       zustand: 5.0.14(@types/react@19.2.17)(react@19.2.7)(use-sync-external-store@1.6.0(react@19.2.7))
     transitivePeerDependencies:
       - '@types/react'
+      - preact
 
   '@fluid-app/ui-primitives@0.1.14(@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7)))(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(date-fns@3.6.0)(react-dom@19.2.7(react@19.2.7))(react-hook-form@7.81.0(react@19.2.7))(react@19.2.7)(zod@4.3.5)':
     dependencies:
@@ -2769,6 +2854,19 @@ snapshots:
       - '@types/react-dom'
       - date-fns
       - react-dom
+
+  '@fluid-app/widget-runtime@0.1.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+    dependencies:
+      '@preact/signals-core': 1.14.3
+      '@quilted/threads': 4.1.0(@preact/signals-core@1.14.3)
+      '@remote-dom/core': 1.11.1(@preact/signals-core@1.14.3)
+      '@remote-dom/react': 1.2.2(@preact/signals-core@1.14.3)(react@19.2.7)
+      postcss: 8.5.9
+      postcss-value-parser: 4.2.0
+      react: 19.2.7
+      react-dom: 19.2.7(react@19.2.7)
+    transitivePeerDependencies:
+      - preact
 
   '@hookform/resolvers@5.4.0(react-hook-form@7.81.0(react@19.2.7))':
     dependencies:
@@ -2850,6 +2948,18 @@ snapshots:
 
   '@oxlint/binding-win32-x64-msvc@1.73.0':
     optional: true
+
+  '@preact/signals-core@1.14.3': {}
+
+  '@quilted/events@2.1.5':
+    dependencies:
+      '@preact/signals-core': 1.14.3
+
+  '@quilted/threads@4.1.0(@preact/signals-core@1.14.3)':
+    dependencies:
+      '@quilted/events': 2.1.5
+    optionalDependencies:
+      '@preact/signals-core': 1.14.3
 
   '@radix-ui/number@1.1.2': {}
 
@@ -3597,6 +3707,26 @@ snapshots:
 
   '@radix-ui/rect@1.1.2': {}
 
+  '@remote-dom/core@1.11.1(@preact/signals-core@1.14.3)':
+    dependencies:
+      '@remote-dom/polyfill': 1.5.1
+      htm: 3.1.1
+    optionalDependencies:
+      '@preact/signals-core': 1.14.3
+
+  '@remote-dom/polyfill@1.5.1': {}
+
+  '@remote-dom/react@1.2.2(@preact/signals-core@1.14.3)(react@19.2.7)':
+    dependencies:
+      '@remote-dom/core': 1.11.1(@preact/signals-core@1.14.3)
+      '@types/react': 18.3.31
+      htm: 3.1.1
+    optionalDependencies:
+      react: 19.2.7
+    transitivePeerDependencies:
+      - '@preact/signals-core'
+      - preact
+
   '@rolldown/pluginutils@1.0.0-beta.27': {}
 
   '@rollup/rollup-android-arm-eabi@4.62.2':
@@ -3798,9 +3928,16 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
+  '@types/prop-types@15.7.15': {}
+
   '@types/react-dom@19.2.3(@types/react@19.2.17)':
     dependencies:
       '@types/react': 19.2.17
+
+  '@types/react@18.3.31':
+    dependencies:
+      '@types/prop-types': 15.7.15
+      csstype: 3.2.3
 
   '@types/react@19.2.17':
     dependencies:
@@ -4048,6 +4185,8 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.3
 
+  htm@3.1.1: {}
+
   human-signals@5.0.0: {}
 
   internmap@2.0.3: {}
@@ -4226,7 +4365,15 @@ snapshots:
 
   picomatch@4.0.5: {}
 
+  postcss-value-parser@4.2.0: {}
+
   postcss@8.5.17:
+    dependencies:
+      nanoid: 3.3.16
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.9:
     dependencies:
       nanoid: 3.3.16
       picocolors: 1.1.1

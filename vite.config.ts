@@ -2,35 +2,19 @@ import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import {
-  fluidManifestPlugin,
-  fluidPreviewPlugin,
-} from "@fluid-app/portal-sdk/vite";
-// Serves the local portal/ draft in dev (manifest interception + same-origin
-// /api proxy). `fluid portal dev` also injects this automatically; the plugin
-// is idempotent, so wiring it here keeps plain `vite`/IDE launches working.
-import { portalDevPlugin } from "@fluid-app/fluid-cli-portal/vite-plugin";
 
 export default defineConfig({
   base: process.env.VITE_ASSET_BASE ?? "/",
-  plugins: [
-    react(),
-    tailwindcss(),
-    portalDevPlugin(),
-    fluidManifestPlugin(),
-    fluidPreviewPlugin(),
-  ],
+  plugins: [react(), tailwindcss()],
   build: {
     target: "esnext",
     chunkSizeWarningLimit: 600,
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL("index.html", import.meta.url)),
-        preview: fileURLToPath(new URL("preview.html", import.meta.url)),
       },
       output: {
-        entryFileNames: (chunk) =>
-          chunk.name === "preview" ? "preview.js" : "portal.js",
+        entryFileNames: "portal.js",
         assetFileNames: (asset) =>
           asset.names?.some((n) => n.endsWith(".css"))
             ? "portal.[ext]"
