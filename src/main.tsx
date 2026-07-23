@@ -1,5 +1,5 @@
 import { createPortal } from "@fluid-app/portal-sdk";
-import { customWidgets } from "./portal.config";
+import { customPages } from "./portal.config";
 import "./index.css";
 
-createPortal({ customWidgets });
+createPortal({ customPages });

@@ -7,7 +7,7 @@ This project is primarily authored through the Fluid OS portal definition sync w
 ## Source of truth
 
 - Use `.agents/skills/fluid-portal-authoring/SKILL.md` for portal definition work.
-- Use `.agents/skills/fluid-widget-authoring/SKILL.md` for company widget creation with `pnpm widget:create`, widget manifests, property schemas, runtime CSS, validation, build, and publish work.
+- Use `.agents/skills/fluid-widget-authoring/SKILL.md` for company Remote DOM widget creation with `pnpm widget:create`, package descriptors, property schemas, runtime CSS, validation, build, and publish work.
 - `.claude/skills/...` contains the same generated skills for Claude-compatible tools.
 
 ## Portal workflow
@@ -33,4 +33,5 @@ Do not edit `.portal-sync/` by hand. It is generated sync metadata.
 - Keep portal JSON valid and references consistent.
 - Preserve stable IDs and slugs unless the change intentionally renames them.
 - Keep the portal shell thin; do not fork SDK internals into this app.
-- For widget changes, use `pnpm widget:create <name>` / `fluid portal widget create <name>` and follow the copied `fluid-widget-authoring` skill before editing manifests or schemas.
+- Keep custom page registration in `src/portal.config.ts` and widget package source in `src/widgets.config.ts`.
+- For widget changes, use `pnpm widget:create <name>` / `fluid portal widget create <name>` and follow the copied `fluid-widget-authoring` skill before editing package definitions or schemas.
