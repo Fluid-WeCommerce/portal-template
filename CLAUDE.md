@@ -30,6 +30,10 @@ Do not edit `.portal-sync/` by hand. It is generated sync metadata.
 
 ## Quality bar
 
+- **Every screen needs a container root.** A screen's `component_tree` must hold exactly one `ContainerWidget` / `LayoutWidget` / `CardWidget` at the top, with all other widgets inside its `props.children`. Without it the screen still renders, but the admin visual builder has no drop zones and a human cannot drag anything onto the page. See the `fluid-portal-authoring` skill.
+- **Choose the right system before building.** A company portal widget runs in a locked-down worker with no network access, so it can only present Fluid's own data (via capabilities or data sources) or props. Anything needing an API key, OAuth, webhooks, or server-side work is a **Mist app** — a hosted app with its own `public_url`, surfaced through a droplet (identity/credentials) plus a placement record, and embedded by **the Mist's public URL**. The droplet is the app's identity, not the app. See the `fluid-portal-authoring` skill.
+- **Droplet widgets are registered widget types, not embeds.** Use `droplet.<scope>.<dropletId>.<Name>` with real props. Do not point an `EmbedWidget` at a droplet's `/embed` route — that is the `?dri=`-gated admin surface and will render blank.
+- **Do not infer that a widget type does not exist because an API did not list it.** Widget-related endpoints are scoped differently and legitimately return empty. When unsure of a `type` or prop shape, ask the human to drag the widget onto a scratch screen in the admin builder, then `pnpm pull` and read the truth.
 - Keep portal JSON valid and references consistent.
 - Preserve stable IDs and slugs unless the change intentionally renames them.
 - Keep the portal shell thin; do not fork SDK internals into this app.
