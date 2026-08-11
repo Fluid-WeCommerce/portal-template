@@ -25,7 +25,7 @@ Open the local URL printed by Vite, usually [http://localhost:5173](http://local
 Useful commands:
 
 ```bash
-pnpm dev        # Start Vite
+pnpm dev        # Pull missing portal JSON and start the portal dev server
 pnpm build      # TypeScript build plus production bundle
 pnpm preview    # Preview dist locally
 pnpm typecheck  # TypeScript checks
@@ -35,7 +35,20 @@ pnpm push       # fluid portal push
 pnpm widget:create <name>  # scaffold a company-owned portal widget
 ```
 
-Set `VITE_API_URL` in `.env` if you need to point the SDK at a non-default Fluid API host.
+When `VITE_API_URL` is unset, `fluid portal dev` resolves the signed-in
+company and proxies `/api` to its tenant BFF at
+`https://<subdomain>.portal.fluid.app`. Set `VITE_API_URL` in `.env` only when
+you need a different API host. The override changes routing, not
+authentication.
+
+Local preview always serves your local `portal/` manifest, custom pages, and
+navigation. Built-in screens that load member data also require the
+`portal_tenant_user_id` session cookie created by the production/Rails handoff.
+A direct localhost preview cannot create or read that HttpOnly tenant cookie,
+so Shop, Orders, Contacts, and other member-data screens may return HTTP 401 or
+remain in an unauthenticated state. Do not treat persistent skeletons as proof
+that authenticated data works; verify those screens through a real tenant
+handoff environment.
 
 ## Project structure
 
@@ -51,8 +64,8 @@ Set `VITE_API_URL` in `.env` if you need to point the SDK at a non-default Fluid
 ├── src/
 │   ├── main.tsx                                   # createPortal bootstrap
 │   ├── index.css                                  # Tailwind and SDK globals
-│   ├── portal.config.ts                           # Custom page registration
-│   ├── widgets.config.ts                          # Remote DOM widget package source
+│   ├── portal.config.ts                           # SDK custom-page integration
+│   ├── widgets.config.ts                          # Remote DOM widget packages
 │   └── widgets/                                   # Created by pnpm widget:create
 ├── portal/                                        # Created/refreshed by fluid portal pull
 └── .portal-sync/                                  # Generated sync metadata
@@ -101,7 +114,7 @@ For visual/content changes, use local preview:
 pnpm dev
 ```
 
-Expected result: the portal shell starts and can load the local pulled portal definition where supported by the SDK/tooling.
+Expected result: the portal CLI pulls the definition when `portal/` is missing, then starts the shell against the local portal JSON. Use this command instead of bare `vite` so the pull and manifest preflight run.
 
 ### 4. Push local definition changes
 
@@ -144,12 +157,12 @@ pnpm widget:create stock-ticker
 pnpm exec fluid portal widget create stock-ticker
 ```
 
-The scaffold writes widget source under `src/widgets/<name>/` and wires the widget manifest for portal tooling. Then use the generated widget authoring skill:
+The scaffold writes widget source under `src/widgets/<name>/` and registers its package in `src/widgets.config.ts`. Portal pages remain separate in `src/portal.config.ts`. Then use the generated widget authoring skill:
 
 - `.agents/skills/fluid-widget-authoring/SKILL.md`
 - `.claude/skills/fluid-widget-authoring/SKILL.md`
 
-That skill covers widget manifests, property schemas, theme variables, runtime CSS, validation, build, and publish workflows.
+That skill covers canonical Remote DOM packages, property schemas, theme variables, runtime CSS, validation, build, and publish workflows.
 
 ## Hosted shell deployment
 

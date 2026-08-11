@@ -4,7 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "postinstall": "node scripts/patch-portal-sdk-styles.mjs",
     "dev": "fluid portal dev",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
@@ -15,8 +14,7 @@
     "widget:create": "fluid portal widget create"
   },
   "dependencies": {
-    "@fluid-app/portal-sdk": "^0.1.460",
-    "@fluid-app/ui-primitives": "^0.1.0",
+    "@fluid-app/portal-sdk": "0.1.462",
     "@hookform/resolvers": "^5.2.2",
     "@tanstack/react-query": "^5.90.11",
     "lucide-react": "~0.575.0",
@@ -27,8 +25,8 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
-    "@fluid-app/fluid-cli": "^0.1.13",
-    "@fluid-app/fluid-cli-portal": "^0.1.51",
+    "@fluid-app/fluid-cli": "0.1.14",
+    "@fluid-app/fluid-cli-portal": "0.1.53",
     "@tailwindcss/vite": "^4.0.0",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
@@ -39,12 +37,10 @@
     "vite": "^6.4.1"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24.0.0"
   },
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.22.0",
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
+    "onlyBuiltDependencies": ["esbuild"]
   }
 }
