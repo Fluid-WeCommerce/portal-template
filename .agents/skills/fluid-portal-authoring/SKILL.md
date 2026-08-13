@@ -209,9 +209,13 @@ values; do not invent a partial config.
 
 Before building anything custom, work out which system the feature belongs to. This is the most expensive decision to get wrong in portal work, and the deciding question is not "internal or external data" — it is **does this need a server that can hold a secret.**
 
-### A company portal widget cannot reach the network
+### A company portal widget has no network access by default
 
-Portal widgets run as Remote DOM packages inside a locked-down Web Worker. `fetch`, `XMLHttpRequest`, `WebSocket`, `EventSource`, `localStorage`, `indexedDB` and more are removed before widget code runs, and no capability re-grants them. A portal widget's data comes from exactly three places:
+Portal widgets run as Remote DOM packages inside a locked-down Web Worker. A widget can use standard worker `fetch` only when it declares `uses: [networkAccess]` and the portal author approves the warning. The grant is stored on the widget node and bound to the current package and capability versions. Existing network-enabled widgets retain consent when those versions change; adding network access to a widget that did not previously have it requires review.
+
+Fluid does not add credentials, tokens, cookies, or headers. Direct requests to `fluid.app`, the current portal origin, loopback, and private-network addresses are blocked. Native redirects are not inspected, and worker execution does not isolate the reputation of `*.fluid.app`; approval is therefore a package-trust decision. WebSocket, EventSource, WebTransport, and streaming-specific APIs remain unavailable.
+
+Without that declaration and grant, a portal widget's data comes from exactly three places:
 
 - props written into the screen JSON
 - built-in host capabilities — `account`, `store`, `products`, `content`, `mySite`, `todos`, `calendar`, `points`, `localization`, and friends

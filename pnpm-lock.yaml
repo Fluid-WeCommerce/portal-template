@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@fluid-app/portal-sdk':
         specifier: 0.1.462
-        version: 0.1.462(@hookform/resolvers@5.7.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
+        version: 0.1.462(@hookform/resolvers@5.7.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.7.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5)
@@ -34,7 +34,7 @@ importers:
         version: 4.3.5
       zustand:
         specifier: ^5.0.9
-        version: 5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
+        version: 5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
     devDependencies:
       '@fluid-app/fluid-cli':
         specifier: 0.1.14
@@ -1728,8 +1728,8 @@ packages:
   zod@4.3.5:
     resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
-  zustand@5.0.14:
-    resolution: {integrity: sha512-/8tAspM5LMPr28b3fwLYrtdj77ECpfZviaP75CMTnwO8ISyaE4GDIG/9rDDYq/cH9D2Xw2A2RXglLInmVBQB/g==}
+  zustand@5.0.15:
+    resolution: {integrity: sha512-MpSEjRiBkA9crSYeOUH32rJC7SVqAbm0Fqcqge/bUi2PPoLcBWKOsG+C8mevmpr8TwXHBVkChbbJiyvkE+i/3A==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=18.0.0'
@@ -2050,7 +2050,7 @@ snapshots:
       ora: 8.2.0
       prompts: 2.4.2
 
-  '@fluid-app/portal-sdk@0.1.462(@hookform/resolvers@5.7.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
+  '@fluid-app/portal-sdk@0.1.462(@hookform/resolvers@5.7.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
     dependencies:
       '@fluid-app/widget-runtime': 0.1.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@hookform/resolvers': 5.7.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5)
@@ -2071,7 +2071,7 @@ snapshots:
       use-sync-external-store: 1.6.0(react@19.2.8)
       zod: 4.3.5
     optionalDependencies:
-      zustand: 5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
+      zustand: 5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
     transitivePeerDependencies:
       - '@types/react'
       - preact
@@ -3078,7 +3078,7 @@ snapshots:
 
   zod@4.3.5: {}
 
-  zustand@5.0.14(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)):
+  zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)):
     optionalDependencies:
       '@types/react': 19.2.18
       react: 19.2.8
