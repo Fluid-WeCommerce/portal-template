@@ -40,8 +40,8 @@ importers:
         specifier: 0.1.14
         version: 0.1.14
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.53
-        version: 0.1.53(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.60
+        version: 0.1.60(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.12))
@@ -468,8 +468,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.53':
-    resolution: {integrity: sha512-KPyEM2zQ5KQjkhnTFzy1zFPwo8miFuZMoLiz189XT25PU2xNfhptyJpZKTbc0thdXzfsYF7pL536pjNNdXxZwA==}
+  '@fluid-app/fluid-cli-portal@0.1.60':
+    resolution: {integrity: sha512-3pLrzdpIXIPiBjBynX+2DnFaXxJbf8HfBETXcLw7DTelc4u+zklXRxRrtaHjKZUwlEtQ8iXZUQLgijiL1RgvQg==}
     engines: {node: '>=24.0.0'}
 
   '@fluid-app/fluid-cli@0.1.14':
@@ -1066,8 +1066,8 @@ packages:
     resolution: {integrity: sha512-WpDfL7NO6j7tH88IDBNVdUJxDh9nmCteAVW9dsep846XdwF4naCBK+/tGLX3KJgcpgMRXCFlTM2hKGoK9FsdrQ==}
     engines: {node: '>=12'}
 
-  baseline-browser-mapping@2.11.13:
-    resolution: {integrity: sha512-k9HNuUVMlqVjQ9UHzfPjIqiDbWw7WqT1AoT7GL8VwvF3r0ZfArtgiSPAlmupyNquNgOJHTuH4CKYf8ttMTWBTQ==}
+  baseline-browser-mapping@2.11.14:
+    resolution: {integrity: sha512-JyJ954WzuIR8/FFzX0o5krdSTrBAkcCSRfWSleRsIHSWV+cZe2FI1PKggVkFke1hBldRs+LRxUczzE9iPmgZww==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -2018,7 +2018,7 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.53(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.60(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
       '@fluid-app/fluid-cli': 0.1.14
       chalk: 5.6.2
@@ -2450,11 +2450,11 @@ snapshots:
 
   ansi-regex@6.3.0: {}
 
-  baseline-browser-mapping@2.11.13: {}
+  baseline-browser-mapping@2.11.14: {}
 
   browserslist@4.28.8:
     dependencies:
-      baseline-browser-mapping: 2.11.13
+      baseline-browser-mapping: 2.11.14
       caniuse-lite: 1.0.30001809
       electron-to-chromium: 1.5.405
       node-releases: 2.0.53
