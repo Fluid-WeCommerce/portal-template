@@ -1,18 +1,12 @@
 # fluid-portal-starter
 
-A Fluid portal shell built with `@fluid-app/portal-sdk` and the Fluid portal CLI.
+A Fluid portal shell, local portal-definition workspace, and optional company
+Remote DOM widget package.
 
-This starter is designed for the Fluid OS definition workflow: pull the portal definition into local JSON, edit `portal/`, push the working/draft definition back to Fluid OS, then create and activate a version when it should go live.
+## Start development
 
-## What's included
-
-- **Portal shell** — Vite builds the hosted SDK shell assets.
-- **Portal definition sync** — `pnpm pull` and `pnpm push` manage local Fluid OS JSON under `portal/`.
-- **Deployment workflow** — GitHub Actions can build and upload the hosted shell assets in `dist/`.
-- **Widget authoring support** — `pnpm widget:create <name>` scaffolds company-owned portal widgets.
-- **AI authoring kit** — generated `AGENTS.md`, `CLAUDE.md`, `.agents/skills/...`, and `.claude/skills/...` files explain the supported portal and widget workflows.
-
-## Quick start
+Requirements: Node.js, pnpm, and a Fluid CLI login or API token for remote
+portal operations.
 
 ```bash
 pnpm install
@@ -20,178 +14,114 @@ pnpm pull
 pnpm dev
 ```
 
-Open the local URL printed by Vite, usually [http://localhost:5173](http://localhost:5173).
+`pnpm dev` runs `fluid portal dev`, normally at http://localhost:5173. When
+`portal/definition.json` is absent, it pulls the linked working definition
+before starting. Pass `-- --skip-pull` only when the missing local definition
+is intentional. The CLI installs portal JSON and widget-development Vite
+plugins; bare Vite does not provide the same preview.
 
-Useful commands:
+Localhost does not receive the production HttpOnly member handoff cookie.
+Authenticated screens can return HTTP 401 even when local JSON and custom pages
+render correctly.
 
-```bash
-pnpm dev        # Pull missing portal JSON and start the portal dev server
-pnpm build      # TypeScript build plus production bundle
-pnpm preview    # Preview dist locally
-pnpm typecheck  # TypeScript checks
-pnpm lint       # OxLint
-pnpm pull       # fluid portal pull
-pnpm push       # fluid portal push
-pnpm widget:create <name>  # scaffold a company-owned portal widget
-```
+## Project map
 
-When `VITE_API_URL` is unset, `fluid portal dev` resolves the signed-in
-company and proxies `/api` to its tenant BFF at
-`https://<subdomain>.portal.fluid.app`. Set `VITE_API_URL` in `.env` only when
-you need a different API host. The override changes routing, not
-authentication.
+| Path | Owner and lifecycle |
+| --- | --- |
+| `.fluidrc` | Author-owned link to the remote portal definition. Change only when intentionally relinking. |
+| `.env.example` | Committed environment template. Copy values to `.env` or `.env.local`; do not put secrets in the example. |
+| `.env`, `.env.local` | Local credentials and overrides. Never commit. |
+| `.gitignore` | Source-control exclusions for local, generated, and secret files. |
+| `.oxlintrc.json` | Generated lint configuration. Change only when project lint policy changes. |
+| `package.json` | Project scripts and dependencies. Author-owned after scaffold creation. |
+| lockfile | Dependency resolution. Commit when dependency changes are intentional. |
+| `tsconfig.json`, `vite.config.ts` | TypeScript and Vite build configuration. |
+| `index.html` | Vite HTML entry and portal mount element. |
+| `README.md` | Human setup, lifecycle, and recovery guidance. |
+| `AGENTS.md`, `CLAUDE.md` | Root coding-agent guidance. `CLAUDE.md` points to the canonical `AGENTS.md`. |
+| `portal/definition.json` | Pulled or author-edited portal metadata. Its `$schema` owns valid fields. |
+| `portal/screens/` | Local screen resources. File names are screen slugs. |
+| `portal/navigations/` | Local web or mobile navigation resources. References use file slugs. |
+| `portal/profiles/` | Profile matching and navigation/theme assignments. |
+| `portal/themes/` | Complete theme resources. Partial theme configs are invalid. |
+| `.portal-sync/` | Pull/push snapshots used for drift and diff calculation. Generated; never edit or commit. |
+| `src/main.tsx` | Portal shell entry. |
+| `src/portal.config.ts` | Custom React page registration and portal shell configuration. |
+| `src/widgets.config.ts` | Company widget package registration for development and `fluid portal deploy`. |
+| `src/widgets/` | Company Remote DOM widget source when present. |
+| `src/index.css` | Portal shell styling. Use portal semantic theme tokens. |
+| `src/vite-env.d.ts` | Vite environment type declarations. |
+| `.github/workflows/deploy.yml` | CDN build and shell-asset deployment workflow. |
+| `.agents/skills/fluid-portal-authoring/` | Portal task procedures and reference guidance. |
+| `.agents/skills/fluid-widget-authoring/` | Widget task procedures and reference guidance. |
+| `.claude/skills/` | Compatibility view of the same skills. Do not maintain divergent instructions. |
+| `dist/` | Generated portal shell assets from `pnpm build`. |
+| `.fluid/widget-dist/` | Generated company widget publication artifacts. |
+| `.fluid/widget-build/`, `.fluid/tmp/` | Generated temporary widget build state. |
+| `.fluid-portal-scaffold-pending` | Transient create/clone marker used during interrupted scaffolds. |
+| `node_modules/` | Installed dependencies. Generated. |
 
-Local preview always serves your local `portal/` manifest, custom pages, and
-navigation. Built-in screens that load member data also require the
-`portal_tenant_user_id` session cookie created by the production/Rails handoff.
-A direct localhost preview cannot create or read that HttpOnly tenant cookie,
-so Shop, Orders, Contacts, and other member-data screens may return HTTP 401 or
-remain in an unauthenticated state. Do not treat persistent skeletons as proof
-that authenticated data works; verify those screens through a real tenant
-handoff environment.
+## Environment
 
-## Project structure
+| Variable | Use |
+| --- | --- |
+| `VITE_API_URL` | Optional browser BFF override. When absent, dev resolves the signed-in company and proxies `/api` to its tenant portal host. |
+| `VITE_ASSET_BASE` | Production base URL for portal shell assets. |
+| `FLUID_API_BASE` | Optional Fluid CLI API-base override. |
+| `FLUID_API_TOKEN` | Fluid CLI token. The older `FLUID_TOKEN` name is also accepted. |
 
-```text
-.
-├── AGENTS.md                                      # AI-agent guidance
-├── CLAUDE.md                                      # Bridge to AGENTS.md
-├── .agents/skills/fluid-portal-authoring/         # Portal sync workflow skill
-├── .agents/skills/fluid-widget-authoring/         # Widget authoring skill
-├── .claude/skills/fluid-portal-authoring/         # Claude-compatible copy
-├── .claude/skills/fluid-widget-authoring/         # Claude-compatible copy
-├── .github/workflows/deploy.yml                   # Hosted shell asset deployment
-├── src/
-│   ├── main.tsx                                   # createPortal bootstrap
-│   ├── index.css                                  # Tailwind and SDK globals
-│   ├── portal.config.ts                           # SDK custom-page integration
-│   ├── widgets.config.ts                          # Remote DOM widget packages
-│   └── widgets/                                   # Created by pnpm widget:create
-├── portal/                                        # Created/refreshed by fluid portal pull
-└── .portal-sync/                                  # Generated sync metadata
-```
+## Edit, validate, and review
 
-## Supported portal authoring workflow
-
-### 1. Pull remote Fluid OS definitions
-
-```bash
-pnpm pull
-```
-
-This runs `fluid portal pull` and writes `portal/` plus `.portal-sync/`.
-
-- `portal/` contains local JSON for Fluid OS resources such as screens, themes, navigations, profiles, and definition metadata.
-- `.portal-sync/` contains generated sync state for future diffs. Do not edit it by hand.
-
-Pull before editing unless you intentionally want to work from the current local JSON.
-
-### 2. Edit `portal/` JSON
-
-Make portal definition changes inside `portal/`.
-
-Guidelines:
-
-- Keep JSON valid and deterministic.
-- Preserve stable IDs, slugs, and cross-resource references unless intentionally changing them.
-- Update related files together when a resource reference changes.
-- Do not invent unsupported fields. Match the shapes produced by `pnpm pull`.
-- Keep changes small enough to review.
-
-### 3. Validate locally
-
-Run checks that match the change:
+Edit only the required resources under `portal/`. Follow each file's `$schema`.
+The file name, not the display name, is the slug used by navigation, profiles,
+and theme references. Use each resource's schema for the exact widget-tree and
+cross-reference contract.
 
 ```bash
 pnpm typecheck
 pnpm lint
 pnpm build
+pnpm exec fluid portal doctor
+git diff
 ```
 
-For visual/content changes, use local preview:
+Before a remote write, run `pnpm pull` when the remote working definition may
+have changed. If local and remote changes conflict, preserve local edits, pull
+the current state, reapply the intended change, and review the new diff.
 
-```bash
-pnpm dev
-```
+## Push and activate
 
-Expected result: the portal CLI pulls the definition when `portal/` is missing, then starts the shell against the local portal JSON. Use this command instead of bare `vite` so the pull and manifest preflight run.
+Push validates and writes the remote working definition. It writes resource
+groups in phases; an earlier group can succeed before a later group fails. Fix
+the reported phase and rerun after checking remote and `.portal-sync/` state.
 
-### 4. Push local definition changes
+Activation is separate. `fluid portal push --yes --activate` creates and
+activates a live version only after every push phase succeeds. Do not activate
+unless the task authorizes a live release.
 
-```bash
-pnpm push
-```
+A network-enabled third-party widget requires interactive approval. In a
+non-interactive run, add `--allow-network-widgets`; `--yes` alone does not grant
+network access. The grant is exact to package ID, package version, and
+capability version and becomes stale when any value changes.
 
-This runs `fluid portal push`, compares local `portal/` JSON against sync state, and updates the remote working/draft definition.
+## Build and deployment boundaries
 
-Push does **not** publish changes live by itself.
+- `pnpm build` creates portal shell assets in `dist/`.
+- `.github/workflows/deploy.yml` uploads `dist/` to GCS and invalidates Cloud
+  CDN. Configure `GCP_PROJECT`, `GCS_BUCKET`, `CDN_URL_MAP`, `CDN_HOSTNAME`,
+  `CDN_INVALIDATION_PATH`, and repository secret `GCP_SA_JSON`.
+- `fluid portal deploy` builds and publishes company widget runtime artifacts
+  from `src/widgets.config.ts` through `.fluid/widget-dist/`.
 
-### 5. Publish a live Fluid OS version
+`fluid portal deploy` does not push portal JSON, activate a portal version, or
+upload the portal shell. The GitHub workflow does not publish portal JSON or
+widget package versions.
 
-When the pushed working/draft definition is ready for users:
+## Detailed guidance
 
-```bash
-pnpm exec fluid portal version create --activate
-```
-
-Only run this when activation is intended. If publishing needs content, design, or release approval, stop and ask first.
-
-## Command boundaries
-
-Do not mix these up:
-
-- `fluid portal pull` downloads the remote portal definition into `portal/`.
-- `fluid portal push` syncs local `portal/` JSON to the remote working/draft definition.
-- `fluid portal version create --activate` makes the remote working/draft definition live.
-- `pnpm build` creates hosted shell assets in `dist/`.
-- GitHub Actions deploys hosted shell assets from `dist/`.
-- `fluid portal deploy` publishes company-owned widget runtime artifacts. It does not push portal JSON and does not upload hosted shell assets.
-
-## Widget work
-
-Company-owned portal widgets are supported through the portal widget scaffold:
-
-```bash
-pnpm widget:create stock-ticker
-# or
-pnpm exec fluid portal widget create stock-ticker
-```
-
-The scaffold writes widget source under `src/widgets/<name>/` and registers its package in `src/widgets.config.ts`. Portal pages remain separate in `src/portal.config.ts`. Then use the generated widget authoring skill:
-
+- `.agents/skills/fluid-portal-authoring/SKILL.md`
 - `.agents/skills/fluid-widget-authoring/SKILL.md`
-- `.claude/skills/fluid-widget-authoring/SKILL.md`
-
-That skill covers canonical Remote DOM packages, property schemas, theme variables, runtime CSS, validation, build, and publish workflows.
-
-## Hosted shell deployment
-
-The included GitHub Actions workflow builds the portal and uploads `dist/` to Google Cloud Storage plus Cloud CDN.
-
-1. Push to `main` or run the workflow manually.
-2. The workflow runs `pnpm build`.
-3. It syncs `dist/` to `gs://portals-cdn/fluid-portal-starter/assets/`.
-4. It invalidates the CDN cache for this portal's asset prefix.
-
-Setup:
-
-1. Create a GCP service account with Storage Object Admin and Compute Load Balancer Admin roles.
-2. Add the service account JSON key as a GitHub Actions secret named `GCP_SA_JSON`.
-3. Set `CDN_HOSTNAME` in `.github/workflows/deploy.yml` to your Cloud CDN load balancer domain.
-4. Update `GCP_PROJECT` and `CDN_URL_MAP` if your project differs from the defaults.
-
-## AI authoring kit
-
-Generated projects include portable guidance for AI coding tools:
-
-- `AGENTS.md` — canonical project instructions.
-- `CLAUDE.md` — plain-file bridge to `AGENTS.md`.
-- `.agents/skills/fluid-portal-authoring/SKILL.md` — portal pull/edit/push/version workflow.
-- `.agents/skills/fluid-widget-authoring/SKILL.md` — widget authoring and validation workflow.
-- `.claude/skills/...` — Claude-compatible copies generated from the same template skill files.
-
-## Learn more
-
-- Fluid Commerce Documentation: https://docs.fluidcommerce.com
-- Vite Documentation: https://vite.dev
-- React Documentation: https://react.dev
+- Installed portal API contract:
+  `node_modules/@fluid-app/portal-sdk/authoring/portal-api/api.md`
+- Installed portal command contract:
+  `node_modules/@fluid-app/fluid-cli-portal/authoring/commands.md`
