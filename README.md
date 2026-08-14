@@ -68,7 +68,8 @@ render correctly.
 | `VITE_API_URL` | Optional browser BFF override. When absent, dev resolves the signed-in company and proxies `/api` to its tenant portal host. |
 | `VITE_ASSET_BASE` | Production base URL for portal shell assets. |
 | `FLUID_API_BASE` | Optional Fluid CLI API-base override. |
-| `FLUID_API_TOKEN` | Fluid CLI token. The older `FLUID_TOKEN` name is also accepted. |
+| `FLUID_TOKEN` | Fluid CLI token. Wins over `FLUID_API_TOKEN` and over any stored profile. The only name `fluid login` reads. |
+| `FLUID_API_TOKEN` | Fallback Fluid CLI token, used only when `FLUID_TOKEN` is unset. Ignored by `fluid login`. |
 
 ## Edit, validate, and review
 

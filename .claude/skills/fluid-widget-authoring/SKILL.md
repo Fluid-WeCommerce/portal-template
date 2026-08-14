@@ -53,7 +53,12 @@ publication endpoints differ.
 - [Runtime, styling, accessibility, and security](references/runtime-and-styling.md)
 - [Development and publication](references/workflows.md)
 - [Installed widget API](../../../node_modules/@fluid-app/portal-sdk/authoring/widget-api/api.md)
-- [Installed widget commands](../../../node_modules/@fluid-app/fluid-cli-widget/authoring/commands.md)
+
+Only one command reference is installed. Use the one that matches the project
+type:
+
+- Standalone widget project: [installed `fluid widget` commands](../../../node_modules/@fluid-app/fluid-cli-widget/authoring/commands.md)
+- Portal project: [installed `fluid portal` commands](../../../node_modules/@fluid-app/fluid-cli-portal/authoring/commands.md)
 
 If an LSP is unavailable, use the installed API reference. The installed
 reference and declarations match the SDK version in this project.
