@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fluid-app/portal-sdk':
-        specifier: 0.1.479
-        version: 0.1.479(@hookform/resolvers@5.9.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
+        specifier: 0.1.482
+        version: 0.1.482(@hookform/resolvers@5.9.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.9.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5)
@@ -37,11 +37,11 @@ importers:
         version: 5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.17
-        version: 0.1.17
+        specifier: 0.1.19
+        version: 0.1.19
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.71
-        version: 0.1.71(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.74
+        version: 0.1.74(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.12))
@@ -468,17 +468,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.71':
-    resolution: {integrity: sha512-MQ5qw0lVBEg0695HlY9PRlYtv8lH03PPpyzMnC7WaLlRbS4QVi19yTBTpCQ+Q7Nzlu0wH5ry3oyhWOPZKNR8Xg==}
+  '@fluid-app/fluid-cli-portal@0.1.74':
+    resolution: {integrity: sha512-HaNikS/M5Vdz8KCxHm7pTnVCdNnFsS4o41bOPqKx5vx5hOP6k5QafdDN1/1M3ol4KVpas34oLNbvVYfvUeckqA==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.17':
-    resolution: {integrity: sha512-h6X4d36rO9HkXqR0YtyXRCTd/TvMPNZn1Ub9uQ1LxiEKMGcK24ObjY5njlDmtDys38j71fqKdm5TwR+kqI4Ffw==}
+  '@fluid-app/fluid-cli@0.1.19':
+    resolution: {integrity: sha512-fEZNFQ18MLjDJ+zMtyqv3IN1BoWWylM1T4ltGg9JINYvQJcwW0GksxCL5nhVAF15qxDfzcSsIMxfCufPu7znng==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
-  '@fluid-app/portal-sdk@0.1.479':
-    resolution: {integrity: sha512-IYV+7ME9tD9JcR06CKFdS70HvXYLKE+N8VC3zsZep7R237AATPVOidPE5vnlkFHOsy+ZYLyCN4ZdeVyZzdJL/g==}
+  '@fluid-app/portal-sdk@0.1.482':
+    resolution: {integrity: sha512-9dwmVPI8Xy/muiLlhWCkyQ3hUoqjfSDl4HJDEYxhwTovIx4dXk44cZKYKGml8WBoWJIGESwAPOnsW7MCd5B4QQ==}
     peerDependencies:
       '@hookform/resolvers': ^5.2.2
       '@tanstack/react-query': ^5.90.11
@@ -492,8 +492,8 @@ packages:
       zustand:
         optional: true
 
-  '@fluid-app/widget-runtime@0.1.2':
-    resolution: {integrity: sha512-FvvJP/ujQ/RpugUKzltpv3zN4lJhT3jtkQYxJgX6vAnUUm6IJlwfRfoO2jDqojzy/hgnj6AX5JFQJZeRKgHOUw==}
+  '@fluid-app/widget-runtime@0.1.4':
+    resolution: {integrity: sha512-JcMRX6azm4I48yMNXqM6BAqSAbFBpPtG3Zs8qsXUfeUpwnekX590dwrcDy089PD1CPJMv6KwKQ7X4Udymn6yNA==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -1178,8 +1178,8 @@ packages:
   dom-helpers@5.2.1:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
 
-  electron-to-chromium@1.5.409:
-    resolution: {integrity: sha512-ChI4N44d0B4A6C8prnNjMOaGgE59fUyEVYcRYm2XEXIjMbbvF5i9UL1cblDbpGqiU0uS8FE8UcKxqZqTXdmzbQ==}
+  electron-to-chromium@1.5.410:
+    resolution: {integrity: sha512-Vq9DD7F4PKCKVmOoG6i1CQSYoF7IUtwTPEQjMXuqNs2S22H8HsojO9myaB81QuvvIKZaF6imSn3XAV1Su6rvXA==}
 
   embla-carousel-react@8.6.0:
     resolution: {integrity: sha512-0/PjqU7geVmo6F734pmPqpyHqiM99olvyecY7zdweCw+6tKEXnrE90pBiBbMMU8s5tICemzpQ3hi5EpxzGW+JA==}
@@ -2018,9 +2018,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.71(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.74(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.17
+      '@fluid-app/fluid-cli': 0.1.19
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2043,16 +2043,16 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.17':
+  '@fluid-app/fluid-cli@0.1.19':
     dependencies:
       chalk: 5.6.2
       commander: 12.1.0
       ora: 8.2.0
       prompts: 2.4.2
 
-  '@fluid-app/portal-sdk@0.1.479(@hookform/resolvers@5.9.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
+  '@fluid-app/portal-sdk@0.1.482(@hookform/resolvers@5.9.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5))(@tanstack/react-query@5.101.4(react@19.2.8))(@types/react@19.2.18)(lucide-react@0.575.0(react@19.2.8))(react-dom@19.2.8(react@19.2.8))(react-hook-form@7.85.0(react@19.2.8))(react@19.2.8)(zod@4.3.5)(zustand@5.0.15(@types/react@19.2.18)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8)))':
     dependencies:
-      '@fluid-app/widget-runtime': 0.1.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@fluid-app/widget-runtime': 0.1.4(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@hookform/resolvers': 5.9.1(react-hook-form@7.85.0(react@19.2.8))(zod@4.3.5)
       '@radix-ui/react-slot': 1.3.3(@types/react@19.2.18)(react@19.2.8)
       '@tanstack/react-query': 5.101.4(react@19.2.8)
@@ -2076,7 +2076,7 @@ snapshots:
       - '@types/react'
       - preact
 
-  '@fluid-app/widget-runtime@0.1.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@fluid-app/widget-runtime@0.1.4(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@preact/signals-core': 1.14.3
       '@quilted/threads': 4.1.0(@preact/signals-core@1.14.3)
@@ -2456,7 +2456,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.11.15
       caniuse-lite: 1.0.30001809
-      electron-to-chromium: 1.5.409
+      electron-to-chromium: 1.5.410
       node-releases: 2.0.53
       update-browserslist-db: 1.3.1(browserslist@4.28.8)
 
@@ -2541,7 +2541,7 @@ snapshots:
       '@babel/runtime': 7.29.7
       csstype: 3.2.3
 
-  electron-to-chromium@1.5.409: {}
+  electron-to-chromium@1.5.410: {}
 
   embla-carousel-react@8.6.0(react@19.2.8):
     dependencies:
