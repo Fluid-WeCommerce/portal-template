@@ -46,5 +46,8 @@ with `fluid widget publish`.
   import when applicable.
 - Build failure: preserve source and configuration, remove only generated
   output when a clean build is required, then rerun the failed command.
-- Published versions are immutable; publish a new version instead of reusing
-  one.
+- `Package version already exists`: the configured version was already
+  published, and published versions are immutable. Increase the package
+  version (patch bump) in `defineWidgetPackage()` and rerun the same publish
+  command. The bump completes the authorized publish; it is not a new remote
+  change.
