@@ -16,9 +16,11 @@ export default defineConfig({
       output: {
         entryFileNames: "portal.js",
         assetFileNames: (asset) =>
-          asset.names?.some((n) => n.endsWith(".css"))
-            ? "portal.[ext]"
-            : "assets/[name].[ext]",
+          asset.names?.some((name) => name.endsWith("remote-widget-shadow.css"))
+            ? "remote-widget-shadow.[ext]"
+            : asset.names?.some((name) => name.endsWith(".css"))
+              ? "portal.[ext]"
+              : "assets/[name].[ext]",
         chunkFileNames: (chunk) =>
           `${chunk.name.replace(/-[A-Za-z0-9_-]{8}$/, "")}.js`,
         manualChunks(id) {
