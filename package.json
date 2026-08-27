@@ -14,7 +14,7 @@
     "widget:create": "fluid portal widget create"
   },
   "dependencies": {
-    "@fluid-app/portal-sdk": "0.1.505",
+    "@fluid-app/portal-sdk": "0.1.506",
     "@hookform/resolvers": "^5.2.2",
     "@tanstack/react-query": "^5.90.11",
     "lucide-react": "~0.575.0",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@fluid-app/fluid-cli": "0.1.22",
-    "@fluid-app/fluid-cli-portal": "0.1.100",
+    "@fluid-app/fluid-cli-portal": "0.1.101",
     "@tailwindcss/vite": "^4.0.0",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
