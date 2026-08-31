@@ -1472,8 +1472,8 @@ packages:
       vite-plus:
         optional: true
 
-  p-limit@7.3.1:
-    resolution: {integrity: sha512-0trZaiG7Y7kN/Egy9a8j47t9osC0Tch4PaIWd9yGF6bvmlk7muExRvGNYb8sXBwEKMoNKsbNN9P8EefuQekE4Q==}
+  p-limit@7.3.2:
+    resolution: {integrity: sha512-Ll0w3fU24vYpXoZmjjZIee6bJQDgG0oAyo1PdmFYI8UDwJJddaHAypxIH9avUu+t+lSsAwKVsb1jDCMIIChliw==}
     engines: {node: '>=20'}
 
   path-key@3.1.1:
@@ -2027,7 +2027,7 @@ snapshots:
       fs-extra: 11.4.0
       handlebars: 4.7.9
       ora: 8.2.0
-      p-limit: 7.3.1
+      p-limit: 7.3.2
       prompts: 2.4.2
       tsx: 4.23.13
       vite: 6.4.3(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.13)
@@ -2838,7 +2838,7 @@ snapshots:
       '@oxlint/binding-win32-ia32-msvc': 1.80.0
       '@oxlint/binding-win32-x64-msvc': 1.80.0
 
-  p-limit@7.3.1:
+  p-limit@7.3.2:
     dependencies:
       yocto-queue: 1.2.2
 
