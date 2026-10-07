@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@fluid-app/fluid-cli": "0.1.40",
-    "@fluid-app/fluid-cli-portal": "0.1.229",
+    "@fluid-app/fluid-cli-portal": "0.1.230",
     "@tailwindcss/vite": "^4.0.0",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
