@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fluid-app/portal-sdk':
-        specifier: 0.1.625
-        version: 0.1.625(@hookform/resolvers@5.9.1(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.1(react@19.3.0))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0)))
+        specifier: 0.1.626
+        version: 0.1.626(@hookform/resolvers@5.9.1(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.1(react@19.3.0))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0)))
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.9.1(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(zod@4.6.5)
@@ -477,8 +477,8 @@ packages:
     engines: {node: '>=24.0.0'}
     hasBin: true
 
-  '@fluid-app/portal-sdk@0.1.625':
-    resolution: {integrity: sha512-TD55Y/85D0IZNDodEGFDbdca4VREB7qMO7LV28Z5xt5YxXIA9fVpvx9LspB4pr87mK5jbGM+d1VhVb724QfOiQ==}
+  '@fluid-app/portal-sdk@0.1.626':
+    resolution: {integrity: sha512-3O/yJV8csBdsdNtBtxEzWeA38dN5B3aV4O0Qbsx7aaqfCHrF8xA8Pkl4vrWzeYXf524GiG5SJpEs0Gm2JOFQKA==}
     peerDependencies:
       '@hookform/resolvers': ^5.2.2
       '@tanstack/react-query': ^5.90.11
@@ -1076,8 +1076,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  caniuse-lite@1.0.30001814:
-    resolution: {integrity: sha512-/Uaf1lAzr59XcMpW0o96WoEfr+VXK2OX4U9AgFoiSHsVJ4HppnIFUjtYzsyDH2+tgANaQb2/oxYGwCPapN1FpA==}
+  caniuse-lite@1.0.30001815:
+    resolution: {integrity: sha512-uDybUEyfgbyJJ93J1vikTylBX31AkdVYeVPeffMQpf8XN7hSfr0oZOn4VFOIMNvtU5+rHvC5Udg2TgtJKHm23Q==}
 
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
@@ -2054,7 +2054,7 @@ snapshots:
       ora: 8.2.0
       prompts: 2.4.2
 
-  '@fluid-app/portal-sdk@0.1.625(@hookform/resolvers@5.9.1(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.1(react@19.3.0))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0)))':
+  '@fluid-app/portal-sdk@0.1.626(@hookform/resolvers@5.9.1(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.1(react@19.3.0))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0)))':
     dependencies:
       '@fluid-app/widget-runtime': 0.1.107(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@hookform/resolvers': 5.9.1(react-hook-form@7.89.0(@types/react@19.3.0)(react@19.3.0))(zod@4.6.5)
@@ -2461,12 +2461,12 @@ snapshots:
   browserslist@4.29.3:
     dependencies:
       baseline-browser-mapping: 2.11.27
-      caniuse-lite: 1.0.30001814
+      caniuse-lite: 1.0.30001815
       electron-to-chromium: 1.5.449
       node-releases: 2.0.57
       update-browserslist-db: 1.3.3(browserslist@4.29.3)
 
-  caniuse-lite@1.0.30001814: {}
+  caniuse-lite@1.0.30001815: {}
 
   chalk@5.6.2: {}
 
