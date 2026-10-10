@@ -37,11 +37,11 @@ importers:
         version: 5.0.15(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.47
-        version: 0.1.47
+        specifier: 0.1.48
+        version: 0.1.48
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.253
-        version: 0.1.253(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.254
+        version: 0.1.254(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.4(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.253':
-    resolution: {integrity: sha512-5yiW0wjajodep6o2FH2gH/37aY2Q9m5EHQVJqTh3/eSEdaX8pHj/W1KrToI4J+HkTcU3bRXnnHDihZsvA/fy8Q==}
+  '@fluid-app/fluid-cli-portal@0.1.254':
+    resolution: {integrity: sha512-f8JlnOf8Y123JG1y2bG5Kno3grdrNjzLStSiUsiY7EpdhF3oAB6opSgK63RQCsoPfSeS6jip3Zr5zbv7Ogao1Q==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.47':
-    resolution: {integrity: sha512-T6cfYIDjLsfys15kaiwaQPhUfNsCYsEo41EqVIh3B9iqGtLHjAxAPu1jgj+VjlyM27Pml5+dcPliYp5TeJbiWg==}
+  '@fluid-app/fluid-cli@0.1.48':
+    resolution: {integrity: sha512-tQdWs7GYxuIFETsrSYg3njx99+upi6KfiJp2jmBc33uLZt0fJwcXR1xOzPtQ+1P/4iF02ki3GE8nREw9tZp6QQ==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -2022,9 +2022,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.253(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.254(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.47
+      '@fluid-app/fluid-cli': 0.1.48
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2047,7 +2047,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.47':
+  '@fluid-app/fluid-cli@0.1.48':
     dependencies:
       chalk: 5.6.2
       commander: 12.1.0
