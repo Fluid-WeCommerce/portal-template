@@ -37,8 +37,8 @@ importers:
         version: 5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.61
-        version: 0.1.61
+        specifier: 0.1.62
+        version: 0.1.62
       '@fluid-app/fluid-cli-portal':
         specifier: 0.1.307
         version: 0.1.307(jiti@2.7.0)(lightningcss@1.32.0)
@@ -474,6 +474,11 @@ packages:
 
   '@fluid-app/fluid-cli@0.1.61':
     resolution: {integrity: sha512-Xali60CoyU3V2hfcVWyFmZ7lRu3c9fLhr7gZYci6ykkJE9zt4vSN9CaOOjDSWKYU2FSgBbBl2R6VoE++mqRyoA==}
+    engines: {node: '>=24.0.0'}
+    hasBin: true
+
+  '@fluid-app/fluid-cli@0.1.62':
+    resolution: {integrity: sha512-JrylzIzDO4+V4JuaLU5pIH12DHZy5SFGzb1oNvtZ0XjvSAc3Z8C/qxJ73EHT8NM6o6Fk7kz0IT5OB8377o/IwA==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -2048,6 +2053,13 @@ snapshots:
       - yaml
 
   '@fluid-app/fluid-cli@0.1.61':
+    dependencies:
+      chalk: 5.6.2
+      commander: 12.1.0
+      ora: 8.2.0
+      prompts: 2.4.2
+
+  '@fluid-app/fluid-cli@0.1.62':
     dependencies:
       chalk: 5.6.2
       commander: 12.1.0
