@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fluid-app/portal-sdk':
-        specifier: 0.1.706
-        version: 0.1.706(@hookform/resolvers@5.9.2(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.4(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))
+        specifier: 0.1.707
+        version: 0.1.707(@hookform/resolvers@5.9.2(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.4(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.9.2(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5)
@@ -477,8 +477,8 @@ packages:
     engines: {node: '>=24.0.0'}
     hasBin: true
 
-  '@fluid-app/portal-sdk@0.1.706':
-    resolution: {integrity: sha512-1trwh7eOvGCc442xdaRQe1qhB4dsy5hLp9p2adZtQJYGBC1Qdl1FFu3FxdwaAHWSGa1lhs/bxIZfLpmL0bg7dQ==}
+  '@fluid-app/portal-sdk@0.1.707':
+    resolution: {integrity: sha512-VW81cglvq50HLFj22TYLtJcErKG6bYHh8g2RM+IWD8f7A2256G5Wc+kYSibuO8/Dn+56H3K2cFgA2J6iuSexWA==}
     peerDependencies:
       '@hookform/resolvers': ^5.2.2
       '@tanstack/react-query': ^5.90.11
@@ -492,8 +492,8 @@ packages:
       zustand:
         optional: true
 
-  '@fluid-app/widget-runtime@0.1.124':
-    resolution: {integrity: sha512-jJRhzNaak2wBAQX8NP6wSI8ga89ZyFq2zCheATqresHlx1tdn4G9GbVfeuaQJUYAGQCUXWLSzCt5Gfg/a3SRBA==}
+  '@fluid-app/widget-runtime@0.1.125':
+    resolution: {integrity: sha512-Szgp267rro+Ox503OTOTieStC9K4JUML2fN6yEEufp8OYgK94ruVoJG68lzVrDSrG74j/VxHt9ojDVlyj8zkUA==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -2058,9 +2058,9 @@ snapshots:
       ora: 8.2.0
       prompts: 2.4.2
 
-  '@fluid-app/portal-sdk@0.1.706(@hookform/resolvers@5.9.2(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.4(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))':
+  '@fluid-app/portal-sdk@0.1.707(@hookform/resolvers@5.9.2(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.104.4(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))':
     dependencies:
-      '@fluid-app/widget-runtime': 0.1.124(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@fluid-app/widget-runtime': 0.1.125(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@hookform/resolvers': 5.9.2(react-hook-form@7.90.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5)
       '@radix-ui/react-slot': 1.5.0(@types/react@19.3.0)(react@19.3.1)
       '@remote-dom/react': 1.2.2(@preact/signals-core@1.14.3)(react@19.3.1)
@@ -2086,7 +2086,7 @@ snapshots:
       - '@types/react'
       - preact
 
-  '@fluid-app/widget-runtime@0.1.124(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@fluid-app/widget-runtime@0.1.125(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@preact/signals-core': 1.14.3
       '@quilted/threads': 4.1.0(@preact/signals-core@1.14.3)
