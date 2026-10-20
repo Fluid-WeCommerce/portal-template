@@ -37,11 +37,11 @@ importers:
         version: 5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.82
-        version: 0.1.82
+        specifier: 0.1.81
+        version: 0.1.81
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.353
-        version: 0.1.353(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.352
+        version: 0.1.352(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.4(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.353':
-    resolution: {integrity: sha512-VpQDE+ZHmODU5Q67oD5cwg+IT3I9iGc3CI7ZceFmrDi1sIkRkCztk+odcI0AuvwOlML83wvgKeLsdaXAG2PDvw==}
+  '@fluid-app/fluid-cli-portal@0.1.352':
+    resolution: {integrity: sha512-sqfUkGtl1MnsNKRoA3Rx/ZNEddwtC+xbWK8zwh1fx/asYPfk6C0FQv63feeaCuZh7ojiSz1kyDLTgYYTY7JakA==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.82':
-    resolution: {integrity: sha512-PWgFAuGny4rWoM00U+voMkqxSwocGf0i1HB1SpdLgZRsEzjwySW5VxArWnAyvQEvXlvRTfoBPNf/0arH6gzsDA==}
+  '@fluid-app/fluid-cli@0.1.81':
+    resolution: {integrity: sha512-OEcxQnxL0AlpUKLXu1W0b3LJw2vpBSG1K6Udgi3OmQzXqXn3nHPURE81OLGzI+y/B9ukOFjB75oJgONaXKWgAQ==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -2102,9 +2102,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.353(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.352(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.82
+      '@fluid-app/fluid-cli': 0.1.81
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2127,7 +2127,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.82':
+  '@fluid-app/fluid-cli@0.1.81':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
