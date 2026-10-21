@@ -37,8 +37,8 @@ importers:
         version: 5.0.15(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.95
-        version: 0.1.95
+        specifier: 0.1.94
+        version: 0.1.94
       '@fluid-app/fluid-cli-portal':
         specifier: 0.1.365
         version: 0.1.365(jiti@2.7.0)(lightningcss@1.32.0)
@@ -474,11 +474,6 @@ packages:
 
   '@fluid-app/fluid-cli@0.1.94':
     resolution: {integrity: sha512-TBq6bSrm+CFcn6hBeuYEPly1pl8ZyIeHDnyK7e6bALbN/T8Ztf0gOnwjZ1qBwgs2xz3qigx/V27TC8vR1+rxpA==}
-    engines: {node: '>=24.0.0'}
-    hasBin: true
-
-  '@fluid-app/fluid-cli@0.1.95':
-    resolution: {integrity: sha512-pSMisj2T8WK8EGPimOEsCw1q8mhV8No3Vw4E75EZXawg2MFA9HajJ0qFawyssiRSa9exYys46VLWLI85Oke9AA==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -2133,14 +2128,6 @@ snapshots:
       - yaml
 
   '@fluid-app/fluid-cli@0.1.94':
-    dependencies:
-      '@napi-rs/keyring': 2.1.2
-      chalk: 5.6.2
-      commander: 12.1.0
-      ora: 8.2.0
-      prompts: 2.4.2
-
-  '@fluid-app/fluid-cli@0.1.95':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
