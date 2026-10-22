@@ -37,11 +37,11 @@ importers:
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.150
-        version: 0.1.150
+        specifier: 0.1.151
+        version: 0.1.151
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.423
-        version: 0.1.423(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.425
+        version: 0.1.425(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,17 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.423':
-    resolution: {integrity: sha512-r4qk3ixKpsxc27+dofpmjvDBmhDTe+oaWn5aVMzY/v6b4eojjUDN6wr3+73TmNtVONFLrvJsvLPPRK7aiosTrQ==}
+  '@fluid-app/fluid-cli-portal@0.1.425':
+    resolution: {integrity: sha512-TtOvpMlX2vpZ5lRv3XeF+tBINNxFdtdnMJ7QJNrZ5qXBbqG1VW/lI3m2ZHKY8OpILknScfYZrBLHZwz6daq0+Q==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.148':
-    resolution: {integrity: sha512-cEv/GjRB/TwIhnRQSBJMXp2IphwZ0+rKI2inpHgkBM2JMMh2Q0ARrgEvwRgTGMbSzJI1z+Vq2XiYGas07hj3xg==}
-    engines: {node: '>=24.0.0'}
-    hasBin: true
-
-  '@fluid-app/fluid-cli@0.1.150':
-    resolution: {integrity: sha512-2ii8p0SHbZ3XrYMb5N48DO0mlPH5UOlaPmUT3yBJnvaHl6iF54T0Ud2/nNv2d5moxvEe6QsTyq9tqF0Kwnm9xg==}
+  '@fluid-app/fluid-cli@0.1.151':
+    resolution: {integrity: sha512-bfC4ikHcw7Q5eulp2zBDitpH4RLA9EVLPY2U8hDcVNih3+enDCPqf1di5Rk3SKCs+vJA5P1tdcyxy1n8Zd9amw==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -2107,9 +2102,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.423(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.425(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.148
+      '@fluid-app/fluid-cli': 0.1.151
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2132,15 +2127,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.148':
-    dependencies:
-      '@napi-rs/keyring': 2.1.2
-      chalk: 5.6.2
-      commander: 12.1.0
-      ora: 8.2.0
-      prompts: 2.4.2
-
-  '@fluid-app/fluid-cli@0.1.150':
+  '@fluid-app/fluid-cli@0.1.151':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
