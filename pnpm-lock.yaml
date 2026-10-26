@@ -37,11 +37,11 @@ importers:
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.232
-        version: 0.1.232
+        specifier: 0.1.233
+        version: 0.1.233
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.518
-        version: 0.1.518(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.519
+        version: 0.1.519(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.518':
-    resolution: {integrity: sha512-YaFsOblBz2/V8ZAk7+iF3US0KrjwLRgC11MglahQhfqFYCmBhpeASBbke5ABkOULXYZ4jrnpi3kMpp3EvHJ+iQ==}
+  '@fluid-app/fluid-cli-portal@0.1.519':
+    resolution: {integrity: sha512-Q9TX35eoAN+7PGgiPXJBUMGNy+iSgWonFMfvJgWLSoU0cjXVADO65ES09BfkNIjh8wjHG1yPzEk80oAa6rVErQ==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.232':
-    resolution: {integrity: sha512-8S8V8LKAsR1ZdtOzoAMQDdDztXo5mdesJpSGeyJVSUO6bL1uy4KgrOUX/B8yrDvt2a27ivXQIghogY5ZR718KQ==}
+  '@fluid-app/fluid-cli@0.1.233':
+    resolution: {integrity: sha512-971JhTaZqO4MD5doeh51FkOM3LLy0sAzv6agdM+12LYf1AaTq/6Ln/XHT83rhQ0SgyMGHjloJLLMEgym6j/meg==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -1258,8 +1258,8 @@ packages:
   dom-helpers@5.2.1:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
 
-  electron-to-chromium@1.5.464:
-    resolution: {integrity: sha512-nRa65aFge40viPAKxMKULIY8tcXKwKboJWNn4RoKwyWXJ6SP7BnrDGKUTzc64818jIciH0PK7LSF8QzZes19GA==}
+  electron-to-chromium@1.5.465:
+    resolution: {integrity: sha512-zg4iUpbeGw7YNZsswc2xKr2uiBex2d8dELAXo92Icw3but1ULbrvK8USe6wVLaWjgJnKBARv0pchx9Owktx6wQ==}
 
   embla-carousel-react@8.6.0:
     resolution: {integrity: sha512-0/PjqU7geVmo6F734pmPqpyHqiM99olvyecY7zdweCw+6tKEXnrE90pBiBbMMU8s5tICemzpQ3hi5EpxzGW+JA==}
@@ -2102,9 +2102,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.518(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.519(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.232
+      '@fluid-app/fluid-cli': 0.1.233
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2127,7 +2127,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.232':
+  '@fluid-app/fluid-cli@0.1.233':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
@@ -2596,7 +2596,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.11.33
       caniuse-lite: 1.0.30001819
-      electron-to-chromium: 1.5.464
+      electron-to-chromium: 1.5.465
       node-releases: 2.0.60
       update-browserslist-db: 1.3.4(browserslist@4.29.5)
 
@@ -2681,7 +2681,7 @@ snapshots:
       '@babel/runtime': 7.29.10
       csstype: 3.2.3
 
-  electron-to-chromium@1.5.464: {}
+  electron-to-chromium@1.5.465: {}
 
   embla-carousel-react@8.6.0(react@19.3.1):
     dependencies:
