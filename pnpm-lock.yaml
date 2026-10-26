@@ -40,8 +40,8 @@ importers:
         specifier: 0.1.211
         version: 0.1.211
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.496
-        version: 0.1.496(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.498
+        version: 0.1.498(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,14 +468,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.496':
-    resolution: {integrity: sha512-JZ8fRGQwuKmeYk+Dxmf6okhJoW6gEPi5VkfQanTBj5uX7BiOFv9BI0UhCGE67+pUWjI8+RKZ5ZYRQehKrvvo+g==}
+  '@fluid-app/fluid-cli-portal@0.1.498':
+    resolution: {integrity: sha512-zy+8WTs6ApLG7DlmL5zbNf5h9hboNN4/+5O7Q8Oq2V7N4PHSKjOFoDYTsyrvQm4ySQkvkQ18rvNTcO4Vcar7mQ==}
     engines: {node: '>=24.0.0'}
-
-  '@fluid-app/fluid-cli@0.1.209':
-    resolution: {integrity: sha512-AOLluTt4S/ROjR2PIuIJ902PLPpYjbth7JqbgD3+C0ALMU2PrPOj2fnZG7Oyv/x3EScdbIGCm5ZZYVHOvUJXvw==}
-    engines: {node: '>=24.0.0'}
-    hasBin: true
 
   '@fluid-app/fluid-cli@0.1.211':
     resolution: {integrity: sha512-eV9PMN1Af9v3Lawk4DWAhuXurvvsWST/8fu8Av7Hu4JHViYR1bbfg0wugZC/iV1v2DF4eqweNGiZDVgBLe2jFw==}
@@ -2107,9 +2102,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.496(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.498(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.209
+      '@fluid-app/fluid-cli': 0.1.211
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2131,14 +2126,6 @@ snapshots:
       - sugarss
       - terser
       - yaml
-
-  '@fluid-app/fluid-cli@0.1.209':
-    dependencies:
-      '@napi-rs/keyring': 2.1.2
-      chalk: 5.6.2
-      commander: 12.1.0
-      ora: 8.2.0
-      prompts: 2.4.2
 
   '@fluid-app/fluid-cli@0.1.211':
     dependencies:
