@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fluid-app/portal-sdk':
-        specifier: 0.1.947
-        version: 0.1.947(@hookform/resolvers@5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))
+        specifier: 0.1.948
+        version: 0.1.948(@hookform/resolvers@5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5)
@@ -37,11 +37,11 @@ importers:
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.295
-        version: 0.1.295
+        specifier: 0.1.296
+        version: 0.1.296
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.582
-        version: 0.1.582(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.584
+        version: 0.1.584(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,22 +468,17 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.582':
-    resolution: {integrity: sha512-ZxP0TyRZwzKGSf51J+YqP6pIjfCWeUvvX8s0JHcseZJWxcGMP0r6PBgdDV1ke9rxtaTjjMtLijjpuyauv4mlmg==}
+  '@fluid-app/fluid-cli-portal@0.1.584':
+    resolution: {integrity: sha512-Tv6+83P75HKZIM5V/GRBlbpK/zEmtd8d2laZEBHs9EC4TS9diEwKi9UOZlEl00T2v8cm3cH5bn7bTDt9du7DdA==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.294':
-    resolution: {integrity: sha512-uyFgmiA5dGpgdoSSOYHHSsNh6jnseoGwV3q/Gv8cfm9i/nVqvLrXLSACLmZYjGrOGMWj0Q/Z2klinrNASEZd7w==}
-    engines: {node: '>=24.0.0'}
-    hasBin: true
-
-  '@fluid-app/fluid-cli@0.1.295':
-    resolution: {integrity: sha512-lWm4nyZnjtZd00Spq9RnZ2dBtG0xyB4E43b5ut7bk0o7YNUtm9GCDreyYiKv5/kFxQswOP9n9dbngzNowgKpCw==}
+  '@fluid-app/fluid-cli@0.1.296':
+    resolution: {integrity: sha512-MxLfcAqp3rskAEl4K8PbHjNRTcGZUYc5ivXVfgXq7GFKzYDuJhqdyoO7lDBkkAgWU77qL9LQNJggKyFmTx4aIw==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
-  '@fluid-app/portal-sdk@0.1.947':
-    resolution: {integrity: sha512-RcFUqTtHUduZ7UM9HziixflhJNGZAOJ70VTaAvB7yICCJ+eRMStt14qXkZbcFuZF7xQ6lT6quFwCgkANMfuI/A==}
+  '@fluid-app/portal-sdk@0.1.948':
+    resolution: {integrity: sha512-7odVGjnkC3dDjtUx6n+pfYazyFXO9GkJ0xY/qiVXFKEzLXplK3CgFq53itZ8ddxHKDV0AhwwpP2dgSf3KtoVxw==}
     peerDependencies:
       '@hookform/resolvers': ^5.2.2
       '@tanstack/react-query': ^5.90.11
@@ -497,8 +492,8 @@ packages:
       zustand:
         optional: true
 
-  '@fluid-app/widget-runtime@0.1.224':
-    resolution: {integrity: sha512-tqBk4s9PQmywkloNpFirK9oD4IV4/e4uKeDRJkiVOmH1jJG9U1vO63WPZ+M2MoxZ/2Fhy5cjvLjQ2ppDzy5tiA==}
+  '@fluid-app/widget-runtime@0.1.225':
+    resolution: {integrity: sha512-LLLu4ayt8bFFQzC32aw3UvvAScLlOKk0olwupzigeiJCXoCfkaGvFHGG9r7WXUnJ2Qe3XZd05VlZyAiuAXRpGA==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -2107,9 +2102,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.582(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.584(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.294
+      '@fluid-app/fluid-cli': 0.1.296
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2132,7 +2127,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.294':
+  '@fluid-app/fluid-cli@0.1.296':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
@@ -2140,17 +2135,9 @@ snapshots:
       ora: 8.2.0
       prompts: 2.4.2
 
-  '@fluid-app/fluid-cli@0.1.295':
+  '@fluid-app/portal-sdk@0.1.948(@hookform/resolvers@5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))':
     dependencies:
-      '@napi-rs/keyring': 2.1.2
-      chalk: 5.6.2
-      commander: 12.1.0
-      ora: 8.2.0
-      prompts: 2.4.2
-
-  '@fluid-app/portal-sdk@0.1.947(@hookform/resolvers@5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5))(@preact/signals-core@1.14.3)(@tanstack/react-query@5.105.0(@types/react@19.3.0)(react@19.3.1))(@types/react@19.3.0)(lucide-react@0.575.0(react@19.3.1))(react-dom@19.3.1(react@19.3.1))(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(react@19.3.1)(zod@4.6.5)(zustand@5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1)))':
-    dependencies:
-      '@fluid-app/widget-runtime': 0.1.224(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@fluid-app/widget-runtime': 0.1.225(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@hookform/resolvers': 5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5)
       '@radix-ui/react-slot': 1.5.0(@types/react@19.3.0)(react@19.3.1)
       '@remote-dom/react': 1.2.2(@preact/signals-core@1.14.3)(react@19.3.1)
@@ -2176,7 +2163,7 @@ snapshots:
       - '@types/react'
       - preact
 
-  '@fluid-app/widget-runtime@0.1.224(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@fluid-app/widget-runtime@0.1.225(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
       '@preact/signals-core': 1.14.3
       '@quilted/threads': 4.1.0(@preact/signals-core@1.14.3)
