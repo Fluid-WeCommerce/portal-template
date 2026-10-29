@@ -40,8 +40,8 @@ importers:
         specifier: 0.1.340
         version: 0.1.340
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.646
-        version: 0.1.646(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.647
+        version: 0.1.647(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,8 +468,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.646':
-    resolution: {integrity: sha512-9KvTgBvK7HOUH/CqhhLWb3LF0Jxm7c5m6WUaJoblEfIe3xjJNEe/Q99H01QriTQV7kJnLdGTQULpNsnCEi9ZoA==}
+  '@fluid-app/fluid-cli-portal@0.1.647':
+    resolution: {integrity: sha512-/qKt4V2HBXrkc5uqo72GqVqPmAVINB5a+mBQuxT+jh/yetzCxDmlOfDw+nRiSYNI1gFok6P+A0vd8PTy1Vi94g==}
     engines: {node: '>=24.0.0'}
 
   '@fluid-app/fluid-cli@0.1.340':
@@ -2102,7 +2102,7 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.646(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.647(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
       '@fluid-app/fluid-cli': 0.1.340
       chalk: 5.6.2
