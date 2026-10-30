@@ -37,11 +37,11 @@ importers:
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.349
-        version: 0.1.349
+        specifier: 0.1.350
+        version: 0.1.350
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.666
-        version: 0.1.666(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.667
+        version: 0.1.667(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.666':
-    resolution: {integrity: sha512-+8n9Prjp0xdeTLcnmBajLR0P4OJ7+J38xiDEBwcGTqZZUo2vbfzzTjxug8vxRxJroXLqaaJtoEtts0vsFbWfHA==}
+  '@fluid-app/fluid-cli-portal@0.1.667':
+    resolution: {integrity: sha512-puQFWgqEsCoFYDV6LxGuNcd+KyobW9OUqD7QJgm93Li3OEbMsVplm9HbcnhlXtPZ3540+3rvjVZ4QPT4OsWgZQ==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.349':
-    resolution: {integrity: sha512-93/CLgASbXJZTRUXurlqVOD5b7NL6KAEyfOY/T5x7M5LvUlRpfyiyloCgO8tIKo/0AdGY85FPXgfLamZrKh4Cw==}
+  '@fluid-app/fluid-cli@0.1.350':
+    resolution: {integrity: sha512-r3rrChoAR1GjMJ2fcTp45FMLmhrO9LKOuy2W6Hm0uyeaFl2oAWyuTIfG9u7a3Dspd2/OyMQJsAcCajER8gL+5w==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -878,6 +878,11 @@ packages:
   '@rollup/rollup-freebsd-arm64@4.67.2':
     resolution: {integrity: sha512-CTvrb0KTAQqcrpcj7rg8FgAI0+jRWnCl+En6exqXDZztCo7vspxlRUX8z9Hp/J/ja2XRnQ1JDbexkBtRyD9jSw==}
     cpu: [arm64]
+    os: [freebsd]
+
+  '@rollup/rollup-freebsd-x64@4.67.2':
+    resolution: {integrity: sha512-SJdblZpBkbOh1e4JwMM5pJJ2PdVmD3WWbMTXvncMSRLA3DdZuwU+P93RaSChOAXN4Mu53tBoFp1ADPzi3dIVAA==}
+    cpu: [x64]
     os: [freebsd]
 
   '@rollup/rollup-linux-arm-gnueabihf@4.67.2':
@@ -2102,9 +2107,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.666(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.667(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.349
+      '@fluid-app/fluid-cli': 0.1.350
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2127,7 +2132,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.349':
+  '@fluid-app/fluid-cli@0.1.350':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
@@ -2376,6 +2381,9 @@ snapshots:
     optional: true
 
   '@rollup/rollup-freebsd-arm64@4.67.2':
+    optional: true
+
+  '@rollup/rollup-freebsd-x64@4.67.2':
     optional: true
 
   '@rollup/rollup-linux-arm-gnueabihf@4.67.2':
@@ -3086,6 +3094,7 @@ snapshots:
       '@rollup/rollup-darwin-arm64': 4.67.2
       '@rollup/rollup-darwin-x64': 4.67.2
       '@rollup/rollup-freebsd-arm64': 4.67.2
+      '@rollup/rollup-freebsd-x64': 4.67.2
       '@rollup/rollup-linux-arm-gnueabihf': 4.67.2
       '@rollup/rollup-linux-arm-musleabihf': 4.67.2
       '@rollup/rollup-linux-arm64-gnu': 4.67.2
