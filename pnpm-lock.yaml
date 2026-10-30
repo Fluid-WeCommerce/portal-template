@@ -822,8 +822,8 @@ packages:
       '@types/react':
         optional: true
 
-  '@remote-dom/core@1.12.0':
-    resolution: {integrity: sha512-mK+vo7aHLklGWLtFP0zCP8Itb4cNWcvRvErGLJvg/oGBF4ChuLEexdDtbZPQ5plJoRNhkwSDOwZcFmA/A9O/yA==}
+  '@remote-dom/core@1.12.1':
+    resolution: {integrity: sha512-gCQoxwVMFNIZfcm3RixYqmlSY08Yxn06zL3n+ZnrV139REswNmmNe/7VEjvT4ETZKw219YWZrO/1amI7dzgzNw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@preact/signals-core': ^1.3.0
@@ -834,12 +834,12 @@ packages:
       preact:
         optional: true
 
-  '@remote-dom/polyfill@1.6.0':
-    resolution: {integrity: sha512-o2kb/cgJfqomrVOJLegsiHCIIRGwxlRp3G11gWmlUReDh51uRsI1eJVsyVDyHH3h8j7SxwaLSBZAr191akSGng==}
+  '@remote-dom/polyfill@1.7.0':
+    resolution: {integrity: sha512-Ei18AW6IFLp+eOIshrOBO+ZO6ttnOHnG7U0gghz4MdOqoSFu1kDc3iVMFUK2+vfkrgUiBxK7WED+q4C728zQxw==}
     engines: {node: '>=14.0.0'}
 
-  '@remote-dom/react@1.2.2':
-    resolution: {integrity: sha512-PkvioODONTr1M0StGDYsR4Ssf5M0Rd4+IlWVvVoK3Zrw8nr7+5mJkgNofaj/z7i8Aep78L28PCW8/WduUt4unA==}
+  '@remote-dom/react@1.2.3':
+    resolution: {integrity: sha512-ChBEgn4uB0PgNWjUdpqhrr0WfmHJB5C82HTPiAeUfbxDaztsykfC5xQTGvdAlVvfsWUtTE+XskkxV442jincaA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0
@@ -2140,7 +2140,7 @@ snapshots:
       '@fluid-app/widget-runtime': 0.1.251(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@hookform/resolvers': 5.9.2(react-hook-form@7.91.0(@types/react@19.3.0)(react@19.3.1))(zod@4.6.5)
       '@radix-ui/react-slot': 1.5.0(@types/react@19.3.0)(react@19.3.1)
-      '@remote-dom/react': 1.2.2(@preact/signals-core@1.14.3)(react@19.3.1)
+      '@remote-dom/react': 1.2.3(@preact/signals-core@1.14.3)(react@19.3.1)
       '@tanstack/react-query': 5.105.0(@types/react@19.3.0)(react@19.3.1)
       class-variance-authority: 0.7.1
       clsx: 2.1.1
@@ -2167,8 +2167,8 @@ snapshots:
     dependencies:
       '@preact/signals-core': 1.14.3
       '@quilted/threads': 4.1.0(@preact/signals-core@1.14.3)
-      '@remote-dom/core': 1.12.0(@preact/signals-core@1.14.3)
-      '@remote-dom/react': 1.2.2(@preact/signals-core@1.14.3)(react@19.3.1)
+      '@remote-dom/core': 1.12.1(@preact/signals-core@1.14.3)
+      '@remote-dom/react': 1.2.3(@preact/signals-core@1.14.3)(react@19.3.1)
       postcss: 8.5.9
       postcss-value-parser: 4.2.0
       react: 19.3.1
@@ -2338,18 +2338,18 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.3.0
 
-  '@remote-dom/core@1.12.0(@preact/signals-core@1.14.3)':
+  '@remote-dom/core@1.12.1(@preact/signals-core@1.14.3)':
     dependencies:
-      '@remote-dom/polyfill': 1.6.0
+      '@remote-dom/polyfill': 1.7.0
       htm: 3.1.1
     optionalDependencies:
       '@preact/signals-core': 1.14.3
 
-  '@remote-dom/polyfill@1.6.0': {}
+  '@remote-dom/polyfill@1.7.0': {}
 
-  '@remote-dom/react@1.2.2(@preact/signals-core@1.14.3)(react@19.3.1)':
+  '@remote-dom/react@1.2.3(@preact/signals-core@1.14.3)(react@19.3.1)':
     dependencies:
-      '@remote-dom/core': 1.12.0(@preact/signals-core@1.14.3)
+      '@remote-dom/core': 1.12.1(@preact/signals-core@1.14.3)
       '@types/react': 18.3.31
       htm: 3.1.1
     optionalDependencies:
