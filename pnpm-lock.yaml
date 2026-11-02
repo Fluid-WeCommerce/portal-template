@@ -37,11 +37,11 @@ importers:
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.385
-        version: 0.1.385
+        specifier: 0.1.384
+        version: 0.1.384
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.709
-        version: 0.1.709(jiti@2.7.0)(lightningcss@1.32.0)
+        specifier: 0.1.708
+        version: 0.1.708(jiti@2.7.0)(lightningcss@1.32.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.5(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.709':
-    resolution: {integrity: sha512-JaqChdb5aqT34h8N2OkntCk7xujsWZpIc0YoJ+rHENTJ2dCLYkHxO+ojxKpoFJKFajtctfZOUqGchI6F80QOkg==}
+  '@fluid-app/fluid-cli-portal@0.1.708':
+    resolution: {integrity: sha512-gv7Kv3NO9Fu9yKjjdDIDw3SoQx137b/tScFI3DmSIM1jQfjWsw88/5WEM8qVqSawn6VCzy6k2XgK5Gb3DGnNxg==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.385':
-    resolution: {integrity: sha512-SiT6TdCGfRE4DYlHYDLJwZkwVQKT+kqTvdkWs7hj8pLzD6qjhctFI3jQwnlGMSm/DowRFXV+DAl64dDW90PPlA==}
+  '@fluid-app/fluid-cli@0.1.384':
+    resolution: {integrity: sha512-SSgsCRgmGnhTd46YjIizVgZlVWh5eKv77h6G1NDtVslZ0eFrPsQT0OQpBdIHR4fFX9TWJREPaojeHMzE9vVe9w==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -1663,8 +1663,8 @@ packages:
   scheduler@0.28.0:
     resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
-  semver@6.3.1:
-    resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
+  semver@6.3.2:
+    resolution: {integrity: sha512-GYrCADwpu6yV5OAvchkQ27Z5wwMxWAEMg5NNWjyHh/5DboFFqbdbvYNIvZouQpxXyeMPoTOh0vdPYKlf0ZswdQ==}
     hasBin: true
 
   shebang-command@2.0.0:
@@ -1861,7 +1861,7 @@ snapshots:
       debug: 4.4.3
       gensync: 1.0.0-beta.2
       json5: 2.2.3
-      semver: 6.3.1
+      semver: 6.3.2
     transitivePeerDependencies:
       - supports-color
 
@@ -1879,7 +1879,7 @@ snapshots:
       '@babel/helper-validator-option': 7.29.7
       browserslist: 4.29.5
       lru-cache: 5.1.1
-      semver: 6.3.1
+      semver: 6.3.2
 
   '@babel/helper-globals@7.29.7': {}
 
@@ -2107,9 +2107,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.709(jiti@2.7.0)(lightningcss@1.32.0)':
+  '@fluid-app/fluid-cli-portal@0.1.708(jiti@2.7.0)(lightningcss@1.32.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.385
+      '@fluid-app/fluid-cli': 0.1.384
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2132,7 +2132,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.385':
+  '@fluid-app/fluid-cli@0.1.384':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
@@ -3118,7 +3118,7 @@ snapshots:
 
   scheduler@0.28.0: {}
 
-  semver@6.3.1: {}
+  semver@6.3.2: {}
 
   shebang-command@2.0.0:
     dependencies:
