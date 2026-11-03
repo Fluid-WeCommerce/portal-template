@@ -37,11 +37,11 @@ importers:
         version: 5.0.16(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.412
-        version: 0.1.412
+        specifier: 0.1.413
+        version: 0.1.413
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.742
-        version: 0.1.742(jiti@2.7.0)(lightningcss@1.33.0)
+        specifier: 0.1.743
+        version: 0.1.743(jiti@2.7.0)(lightningcss@1.33.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.4(vite@6.4.5(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.742':
-    resolution: {integrity: sha512-Fr8Z1DE7T2S3pwR6RuIRc2N7k4icYFPKg0P3GcjQGz9U69wjUTVZfK4+u3V23rnlAEnwB2LhY7v/JX3N6arcdw==}
+  '@fluid-app/fluid-cli-portal@0.1.743':
+    resolution: {integrity: sha512-k4/Iq4jhRzh0bb+V2D3QBgdY2BjWje2d44DCzWbH8onqu+4NkHVwiHBxGKUt1X2uTUEY9dbL2J4tuVDeWdFvJA==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.412':
-    resolution: {integrity: sha512-aPj/BhPhgHUbkgidXejTerC4nRzfcmFbn+E06KwleHb1c0zqwo9Yj5mNWN7o4c9UAUarGaHJrPw3cljivP6CUw==}
+  '@fluid-app/fluid-cli@0.1.413':
+    resolution: {integrity: sha512-SwXlp1qf6OgvYh4usw9zLTSagBpnChu3/6XQZSWmeWuj8Hgx6W9kDr8ocvTmOl2uvzmQgXwuElvCAeuu7RVrLg==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -1211,8 +1211,8 @@ packages:
     resolution: {integrity: sha512-B5znKqRmKROAN4oHWQ50W/qisVjA9GXh2WMsVKdFVp4DxWmcrOsweqgUOUVsv5th96kwaZlokU6SlV4J3gak1w==}
     engines: {node: '>=12'}
 
-  d3-format@3.1.2:
-    resolution: {integrity: sha512-AJDdYOdnyRDV5b6ArilzCPPwc1ejkHcoyFarqlPqT7zRYjhavcT3uSrqcMvsgh2CgoPbK3RCwyHaVyxYcP2Arg==}
+  d3-format@3.1.3:
+    resolution: {integrity: sha512-+F+/49swqmGuQJmSKnVMIDH/QkEFV5li9QRj0xm/KhyAUBv099O5PrvpQFxBp24PYph17Mnvt9mjKQV0ii0nMA==}
     engines: {node: '>=12'}
 
   d3-interpolate@3.0.2:
@@ -1223,20 +1223,20 @@ packages:
     resolution: {integrity: sha512-jsbgV8zIT38ReB9O7X7gcLndTQRONSqNNd+oGIaTBdUug4r5jFmp0N6RY9R5GWbdUDucn0qoTGyfjapT4tDhcg==}
     engines: {node: '>=12'}
 
-  d3-scale@4.0.2:
-    resolution: {integrity: sha512-GZW464g1SH7ag3Y7hXjf8RoUuAFIqklOAq3MRl4OaWabTFJY9PN/E1YklhXLh+OQ3fM9yS2nOkCoS+WLZ6kvxQ==}
+  d3-scale@4.0.3:
+    resolution: {integrity: sha512-66cWobCNzcMvlfoaDHCxuIv9TBUWG1BLOWdv9kHHFuCr1JdqAWPvTmsaEYDD5NRMyWZ5+7u0GqiCDfMXMqh3hg==}
     engines: {node: '>=12'}
 
   d3-shape@3.2.1:
     resolution: {integrity: sha512-dm2o+lbKdzg9tY7GEag/dB9hcbodLfwkE/DkvqbELJXaMz0yKzWWhZqhbI7CKubukA7HnRyz0avdtvi7EPxPvw==}
     engines: {node: '>=12'}
 
-  d3-time-format@4.1.0:
-    resolution: {integrity: sha512-dJxPBlzC7NugB2PDLwo9Q8JiTR3M3e4/XANkreKSUxF8vvXKqm1Yfq4Q5dl8budlunRVlUUaDUgFt7eA8D6NLg==}
+  d3-time-format@4.1.1:
+    resolution: {integrity: sha512-22XaqjyCjpqgda20erhsOjGmC3vvYwTNYniKAd45W5UWLDF43moeOuV9qYpRqobIlsnK0UhnKZjUUJm3VgORUA==}
     engines: {node: '>=12'}
 
-  d3-time@3.1.0:
-    resolution: {integrity: sha512-VqKjzBLejbSMT4IgbmVgDjpkYrNWUYJnbCGo874u7MMKIWsILRX+OpX/gTk8MqjpT1A/c6HY2dCA77ZN0lkQ2Q==}
+  d3-time@3.1.1:
+    resolution: {integrity: sha512-Ze7rjrhMzdeulh0/hjcfFj7XLAHOfowtEMfsoG6DU866HPynQNW7Wfen6hzXcqKTv8XzxvF6Hzr5XD6bMHr2ug==}
     engines: {node: '>=12'}
 
   d3-timer@3.0.2:
@@ -2106,9 +2106,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.742(jiti@2.7.0)(lightningcss@1.33.0)':
+  '@fluid-app/fluid-cli-portal@0.1.743(jiti@2.7.0)(lightningcss@1.33.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.412
+      '@fluid-app/fluid-cli': 0.1.413
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2131,7 +2131,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.412':
+  '@fluid-app/fluid-cli@0.1.413':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
@@ -2645,7 +2645,7 @@ snapshots:
 
   d3-ease@3.0.2: {}
 
-  d3-format@3.1.2: {}
+  d3-format@3.1.3: {}
 
   d3-interpolate@3.0.2:
     dependencies:
@@ -2653,23 +2653,23 @@ snapshots:
 
   d3-path@3.1.1: {}
 
-  d3-scale@4.0.2:
+  d3-scale@4.0.3:
     dependencies:
       d3-array: 3.2.5
-      d3-format: 3.1.2
+      d3-format: 3.1.3
       d3-interpolate: 3.0.2
-      d3-time: 3.1.0
-      d3-time-format: 4.1.0
+      d3-time: 3.1.1
+      d3-time-format: 4.1.1
 
   d3-shape@3.2.1:
     dependencies:
       d3-path: 3.1.1
 
-  d3-time-format@4.1.0:
+  d3-time-format@4.1.1:
     dependencies:
-      d3-time: 3.1.0
+      d3-time: 3.1.1
 
-  d3-time@3.1.0:
+  d3-time@3.1.1:
     dependencies:
       d3-array: 3.2.5
 
@@ -3197,9 +3197,9 @@ snapshots:
       d3-array: 3.2.5
       d3-ease: 3.0.2
       d3-interpolate: 3.0.2
-      d3-scale: 4.0.2
+      d3-scale: 4.0.3
       d3-shape: 3.2.1
-      d3-time: 3.1.0
+      d3-time: 3.1.1
       d3-timer: 3.0.2
 
   vite@6.4.5(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.23.15):
