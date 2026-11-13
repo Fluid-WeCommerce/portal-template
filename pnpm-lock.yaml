@@ -37,11 +37,11 @@ importers:
         version: 5.1.0(@types/react@19.3.0)(react@19.3.1)(use-sync-external-store@1.7.0(react@19.3.1))
     devDependencies:
       '@fluid-app/fluid-cli':
-        specifier: 0.1.728
-        version: 0.1.728
+        specifier: 0.1.729
+        version: 0.1.729
       '@fluid-app/fluid-cli-portal':
-        specifier: 0.1.1105
-        version: 0.1.1105(jiti@2.7.0)(lightningcss@1.33.0)
+        specifier: 0.1.1106
+        version: 0.1.1106(jiti@2.7.0)(lightningcss@1.33.0)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.5(vite@6.4.6(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.23.15))
@@ -468,12 +468,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fluid-app/fluid-cli-portal@0.1.1105':
-    resolution: {integrity: sha512-b573Ta76wJp8t21J/WBIljYTEBQ9yIpb1Jnn9Z9ZwEO4Kn8YygQGk38pfKqGsm8PmKIXk5bRXveENinwP6dKzw==}
+  '@fluid-app/fluid-cli-portal@0.1.1106':
+    resolution: {integrity: sha512-lZhQ1FgyNw8TXJLZfrv4gnO5ig5c3edcsjiy48EF6noJcaiHD6jp5hD8EHzHiXA/sY5ydwq8onzlpTHoVebWgw==}
     engines: {node: '>=24.0.0'}
 
-  '@fluid-app/fluid-cli@0.1.728':
-    resolution: {integrity: sha512-xZjLc7XisaGf/2qqn7tmRR7d6+iP3Y61NRAkTmVcvckK9G2ObfckSG5uEbblvSA6hudRLlMEkV0omoPSKsdD2g==}
+  '@fluid-app/fluid-cli@0.1.729':
+    resolution: {integrity: sha512-+StsQ59NnJdQUT5ZV2kFYR7fZTxbWKLQR43liL24dVKGRIo4J62ZZvuarVXHvpTx18maCvStxvf++MayjlxhLg==}
     engines: {node: '>=24.0.0'}
     hasBin: true
 
@@ -2100,9 +2100,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@fluid-app/fluid-cli-portal@0.1.1105(jiti@2.7.0)(lightningcss@1.33.0)':
+  '@fluid-app/fluid-cli-portal@0.1.1106(jiti@2.7.0)(lightningcss@1.33.0)':
     dependencies:
-      '@fluid-app/fluid-cli': 0.1.728
+      '@fluid-app/fluid-cli': 0.1.729
       chalk: 5.6.2
       commander: 12.1.0
       execa: 8.0.1
@@ -2125,7 +2125,7 @@ snapshots:
       - terser
       - yaml
 
-  '@fluid-app/fluid-cli@0.1.728':
+  '@fluid-app/fluid-cli@0.1.729':
     dependencies:
       '@napi-rs/keyring': 2.1.2
       chalk: 5.6.2
