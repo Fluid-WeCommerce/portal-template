@@ -25,8 +25,8 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
-    "@fluid-app/fluid-cli": "0.1.777",
-    "@fluid-app/fluid-cli-portal": "0.1.1163",
+    "@fluid-app/fluid-cli": "0.1.778",
+    "@fluid-app/fluid-cli-portal": "0.1.1164",
     "@tailwindcss/vite": "^4.0.0",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
